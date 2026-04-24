@@ -167,9 +167,58 @@ body {
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
 }
 
+
+
+
+
+
+
+.furniture-card-bg {
+    background-image: url('furniture.jpg'); /* Apni high-quality image yahan dalen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    /* Image quality maintain karne ke liye */
+    image-rendering: auto; 
+}
+
+/* Glass Overlay (Text ko readability deta hai bina image blur kiye) */
+.glass-overlay {
+    background-color: rgba(255, 255, 255, 0.2); /* Bohat halka white */
+    backdrop-filter: blur(3px); /* Glass look */
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    transition: all 0.4s ease;
+}
+
+/* Hover par image ekdum saaf (No blur) */
+.furniture-card-bg:hover .glass-overlay {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(0px);
+}
+
+/* Text styling for contrast */
+.furniture-card-bg .card-title {
+    color: #000;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+    font-weight: 800;
+}
+
+.furniture-card-bg .card-text {
+    color: #111;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+
+
 /* PVC Card Specific Styling */
 .gypsum-card-bg {
-    background-image: url('gypsum ceilimg 3.png'); /* Apni high-quality PVC image ka naam yahan likhen */
+    background-image: url('gypsum ceiling 3.png'); /* Apni high-quality PVC image ka naam yahan likhen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -205,6 +254,12 @@ body {
     font-weight: 600;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
+
+
+
+
+
+
 
 
 /* PVC Card Specific Styling */
@@ -284,6 +339,8 @@ body {
     font-weight: 600;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
 }
+
+
 
 /* Floating Footer Main Style */
 .floating-footer {
@@ -367,50 +424,83 @@ body {
 
     </style>
 </head>
-
+<script>
+function shareWebsite() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Akbar Ali Interior',
+      text: 'Check out this amazing interior design website!',
+      url: 'https://altafkhan01017-star.github.io/akbar-ali/'
+    });
+  } else {
+    alert("Sharing not supported on this browser");
+  }
+}
+</script>
 <body>
 
-    <nav id="master-nav" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-    <div class="container">
-        
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="akbar ali logo.jpg" alt="Logo" width="40" class="me-2">
-            <span class="fw-bold fs-4">Akbar Ali Interior</span>
-        </a>
+    <nav id="master-nav" class="navbar navbar-expand-lg fixed-top shadow-sm" 
+     style="background:linear-gradient(90deg,#000000,#434343);">
+  <div class="container">
+    
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center text-warning fw-bold fs-4" href="index.html">
+      <img src="akbar ali logo.jpg" alt="Logo" width="40" class="me-2 rounded-circle shadow">
+      Akbar Ali Interior
+    </a>
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Toggler -->
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-            <div class="offcanvas-header border-bottom d-lg-none">
-                <h5 class="offcanvas-title fw-bold">Menu</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            
-            <div class="offcanvas-body">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link fw-semibold mx-2" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold mx-2" href="about.html">About Us</a></li>
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-semibold mx-2" href="#" id="servicesDrop" data-bs-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu shadow border-0">
-                            <li><a class="dropdown-item" href="pop.html">POP Wall Punning</a></li>
-                            <li><a class="dropdown-item" href="gypsum.html">Gypsum Ceiling</a></li>
-                            <li><a class="dropdown-item" href="pvc.html">PVC Ceiling</a></li>
-                            <li><a class="dropdown-item" href="arm.html">Modular Ceiling</a></li>
-                        </ul>
-                    </li>
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header border-bottom d-lg-none">
+        <h5 class="offcanvas-title fw-bold">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+      
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
 
-                    <li class="nav-item"><a class="nav-link fw-semibold mx-2" href="https://drive.google.com/file/d/1xqOlU0jy1bv1Pc18wK4OEiCUOfOj8K_C/view?usp=drivesdk">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold mx-2 text-instagram" href="https://www.instagram.com/akbaraliinterior?igsh=ZWtuc293cjRqdzFu"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    
-                </ul>
-            </div>
-        </div>
+          <!-- Links -->
+          <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="about.html">About Us</a></li>
+         
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle text-white fw-semibold mx-2" href="#" id="servicesDrop" data-bs-toggle="dropdown">
+    Services
+  </a>
+  <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3" 
+      style="background:linear-gradient(135deg,#1f1f1f,#3a3a3a);">
+    <li><a class="dropdown-item text-warning fw-semibold" href="pop.html">POP Wall Punning</a></li>
+    <li><a class="dropdown-item text-warning fw-semibold" href="gypsum.html">Gypsum Ceiling</a></li>
+    <li><a class="dropdown-item text-warning fw-semibold" href="pvc.html">PVC Ceiling</a></li>
+    <li><a class="dropdown-item text-warning fw-semibold" href="arm.html">Modular Ceiling</a></li>
+  </ul>
+</li>
+
+          <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="https://drive.google.com/file/d/1xqOlU0jy1bv1Pc18wK4OEiCUOfOj8K_C/view?usp=drivesdk">Portfolio</a></li><br> 
+
+          
+          <!-- Attractive Share Button -->
+          <li class="nav-item">
+            <button onclick="shareWebsite()" 
+              style="padding:10px 22px; background:linear-gradient(45deg,#ff9800,#ff5722); color:white; 
+                     border:none; border-radius:25px; font-weight:bold; 
+                     box-shadow:0 4px 12px rgba(0,0,0,0.4); transition:0.3s;">
+              <i class="fas fa-share-alt"></i> Share
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </nav>
+
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -507,6 +597,20 @@ body {
                 Providing practical and professional grid ceilings for commercial spaces.
             </p>
             <a href="arm.html" class="btn btn-dark mt-auto">View Details</a>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="col">
+    <div class="card h-100 shadow-sm border-0 text-center work furniture-card-bg">
+        <div class="card-body d-flex flex-column card-overlay-sharp">
+            <h4 class="card-title fw-bold">Furniture</h4>
+            <p class="card-text mb-4">
+                Providing practical and professional grid ceilings for commercial spaces.
+            </p>
+            <a href="furniture.html" class="btn btn-dark mt-auto">View Details</a>
         </div>
     </div>
 </div>
@@ -612,12 +716,12 @@ body {
                                     <div class="col-md-6">
                                         <label for="nameInput" class="form-label fw-bold">Your Name</label><br>
                                         <input type="text" class="form-control form-control-lg" id="nameInput"
-                                            name="Name" placeholder="Enter your full name" required><br> 
+                                            name="Name" required><br> 
                                     </div><br>
                                     <div class="col-md-6">
                                         <label for="phoneInput" class="form-label fw-bold">Phone Number</label>
                                         <input type="tel" class="form-control form-control-lg" id="phoneInput"
-                                            name="Phone Number" placeholder="e.g., +91 98765 43210" required><br>
+                                            name="Phone Number" required><br>
                                     </div>
                                 </div>
 
@@ -625,13 +729,13 @@ body {
                                     <div class="col-md-6">
                                         <label for="emailInput" class="form-label fw-bold">Email Address</label>
                                         <input type="email" class="form-control form-control-lg" id="emailInput"
-                                            name="Email" placeholder="name@example.com" required><br>
+                                            name="Email" required><br>
                                     </div><br>
                                     <div class="col-md-6">
                                         <label for="addressInput" class="form-label fw-bold">Your Location /
                                             Address</label>
                                         <input type="text" class="form-control form-control-lg" id="addressInput"
-                                            name="Location" placeholder="e.g., City, Area or Full Address"><br>
+                                            name="Location"><br>
                                     </div><br>
                                 </div>
 
@@ -640,7 +744,7 @@ body {
                                         (Work Required)</label>
                                     <textarea class="form-control form-control-lg" id="projectDetails"
                                         name="Project Details" rows="5"
-                                        placeholder="e.g., I need a POP False Ceiling for my living room (15x12ft), with modern lighting."></textarea>
+                                    ></textarea>
                                 </div><br>
 
                                 <div class="d-grid">
@@ -649,7 +753,7 @@ body {
                                         Free Quote!</button>
                                 </div>
                             </form>
-                        </div>
+                        </div><br><br>
                     </div>
                 </div>
             </div>
@@ -665,7 +769,7 @@ body {
 
         <div class="footer-logo-container">
             <a href="index.html">
-                <img src="akbar ali logo.jpg" alt="Logo" class="footer-circle-logo shadow">
+                <img src="full logo .jpeg" alt="Logo" class="footer-circle-logo shadow">
             </a>
         </div>
 

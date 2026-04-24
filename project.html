@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Projects - Akbar Ali Interior</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #111;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.header p {
+    color: gray;
+}
+
+/* FILTER BUTTONS */
+.filters {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.filters button:hover {
+    background: #ff6600;
+}
+
+/* PROJECT GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0;
+}
+
+.card-content p {
+    color: gray;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    Akbar Ali Interior 
+</div>
+
+<div class="header">
+    <h1>Our Projects</h1>
+    <p>We transform spaces into beautiful interiors</p>
+</div>
+
+<div class="filters">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('pvc')">PVC Ceiling</button>
+    <button onclick="filterProjects('gypsum')">Gypsum ceiling </button>
+    <button onclick="filterProjects('pop')">POP Design</button>
+    <button onclick="filterProjects('Furniture')">Furniture design</button>
+    <button onclick="filterProjects('modular')">Modular Ceiling</button>
+</div>
+
+<div class="grid" id="projectGrid">
+
+    <!-- PROJECT 1 -->
+    <div class="card pvc">
+        <img src="pvc .jpg">
+        <div class="card-content">
+            <h3>PVC Ceiling Design</h3>
+            <p>Discreption - PVC ceilings are modern, durable, waterproof, and
+                 cost-effective—perfect for stylish, low-maintenance spaces.</p>
+            <a href="dpvc.html" class="btn">View Details</a>
+        </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="card gypsum">
+        <img src="gypsum ceiling 4.png">
+        <div class="card-content">
+            <h3>Gypsum Ceiling</h3>
+            <p>Discreption - Gypsum ceilings are sleek, versatile, 
+                and modern—offering smooth finishes, design flexibility, and elegant lighting.</p>
+            <a href="dgypsum.html" class="btn">View Details</a>
+        </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="card pop">
+        <img src="pop bg.jpg">
+        <div class="card-content">
+            <h3>POP Design</h3>
+            <p>Discreption - POP ceilings are versatile, detailed, 
+                and cost-effective—perfect for adding character and elegance to interiors.</p>
+            <a href="#" class="btn">View Details</a>
+        </div>
+    </div>
+
+<!-- PROJECT 4 -->
+    <div class="card modular">
+        <img src="modular 2.png">
+        <div class="card-content">
+            <h3>Modular ceiling</h3>
+            <p>Discreption - Modular ceilings are modern, flexible,
+                 and functional—easy to install, low-maintenance, and perfect for integrating lighting and ventilation. </p>
+            <a href="#" class="btn">View Details</a>
+        </div>
+    </div>
+
+<!-- PROJECT 4 -->
+    <div class="card Furniture">
+        <img src="furniture 4.jpg">
+        <div class="card-content">
+            <h3> Furniture design</h3>
+            <p>Discreption - Custom furniture combines elegance with utility—crafted
+                 from quality materials to enhance comfort and interiors. </p>
+            <a href="dfurnitur.html" class="btn">View Details</a>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+<div class="footer">
+    © 2026 Akbar Ali Interior | All Rights Reserved
+</div>
+
+<script>
+function filterProjects(category) {
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        if (category === 'all') {
+            card.style.display = 'block';
+        } else {
+            if (card.classList.contains(category)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
+    });
+}
+</script>
+
+</body>
+</html>

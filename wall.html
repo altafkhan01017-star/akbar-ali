@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Luxury Furniture - Akbar Ali Interior</title>
+    <title>POP Wall Punning - Akbar Ali Interior</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,71 +17,49 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
     <style>
-        /* =========================
-           ROOT
-        ========================= */
-
         :root {
-
             --bg: #0E0E0E;
             --black: #080808;
             --card: #1B1B1B;
+            --card2: #222222;
             --gold: #D4AF37;
             --gold-light: #E8C766;
             --white: #FFFFFF;
             --muted: #A9A9A9;
             --border: rgba(212, 175, 55, 0.25);
-
         }
-
 
         * {
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-
             margin: 0;
-
             font-family: 'Poppins', sans-serif;
-
             background: var(--bg);
-
             color: var(--white);
-
             overflow-x: hidden;
-
         }
-
 
         a {
             text-decoration: none;
         }
 
-
         ::selection {
-
             background: var(--gold);
-
             color: #000;
-
         }
-
 
 
         /* =========================
            NAVBAR
         ========================= */
-  @media (min-width: 992px) {
-
+        @media (min-width: 992px) {
             .offcanvas {
                 visibility: visible !important;
                 transform: none !important;
@@ -93,40 +70,30 @@
                 box-shadow: none !important;
             }
 
-
             .offcanvas-body {
                 padding: 0 !important;
                 overflow: visible !important;
             }
 
-
+            /* Hover par dropdown khulne ka fix */
             .dropdown:hover .dropdown-menu {
                 display: block;
                 margin-top: 0;
             }
-
         }
 
-
+        /* Mobile Sidebar Settings */
         @media (max-width: 991px) {
-
             .offcanvas {
                 width: 280px !important;
             }
-
 
             .nav-link {
                 padding: 12px 0 !important;
                 border-bottom: 1px solid #f1f1f1;
             }
-
         }
 
-
-
-        /* =========================
-           NAVBAR BUTTON
-        ========================= */
 
         .nav-contact-btn {
             background-color: #000 !important;
@@ -135,123 +102,69 @@
             transition: 0.3s;
         }
 
-
-        .nav-contact-btn:hover {
-            background-color: var(--gold) !important;
-            color: #000 !important;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-        }
-       
-
         /* =========================
-           HERO
+           SERVICE HERO
         ========================= */
 
         .service-header {
-
-            min-height: 520px;
-
+            min-height: 500px;
             position: relative;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             text-align: center;
 
             background:
-
-                linear-gradient(rgba(0, 0, 0, 0.60),
-                    rgba(0, 0, 0, 0.90)),
-
-                url('furniture bg.jpg');
+                linear-gradient(rgba(0, 0, 0, 0.62),
+                    rgba(0, 0, 0, 0.88)),
+                url('pop bg.jpg');
 
             background-size: cover;
-
             background-position: center;
-
         }
-
 
         .hero-content {
-
-            max-width: 950px;
-
-            padding: 50px 20px;
-
+            max-width: 900px;
+            padding: 40px 20px;
         }
-
 
         .hero-small {
-
             color: var(--gold);
-
             font-size: 12px;
-
             font-weight: 600;
-
             letter-spacing: 4px;
-
             text-transform: uppercase;
-
-            margin-bottom: 18px;
-
+            margin-bottom: 15px;
         }
-
 
         .service-header h1 {
-
-            font-size:
-                clamp(40px, 7vw, 72px);
-
+            font-size: clamp(40px, 7vw, 72px);
             font-weight: 800;
-
             line-height: 1.1;
-
             margin: 0;
-
         }
-
 
         .service-header h1 span {
-
             color: var(--gold);
-
         }
-
 
         .hero-line {
-
             width: 80px;
-
             height: 3px;
-
             background: var(--gold);
-
-            margin: 24px auto;
-
+            margin: 22px auto;
             border-radius: 10px;
-
         }
-
 
         .service-header p {
-
             color: #ddd;
-
             font-size: 16px;
-
-            line-height: 1.8;
-
-            max-width: 800px;
-
+            max-width: 750px;
             margin: auto;
-
+            line-height: 1.8;
         }
-
 
 
         /* =========================
@@ -259,241 +172,128 @@
         ========================= */
 
         .section {
-
             padding: 90px 0;
-
         }
-
 
         .section-dark {
-
             background: var(--bg);
-
         }
 
+        .section-black {
+            background: var(--black);
+        }
 
         .section-heading {
-
             text-align: center;
-
             margin-bottom: 50px;
-
         }
-
 
         .mini-title {
-
             color: var(--gold);
-
             font-size: 12px;
-
             font-weight: 600;
-
             letter-spacing: 3px;
-
             text-transform: uppercase;
-
             margin-bottom: 10px;
-
         }
-
 
         .section-heading h2 {
-
-            font-size:
-                clamp(30px, 5vw, 46px);
-
+            font-size: clamp(30px, 5vw, 46px);
             font-weight: 700;
-
             margin-bottom: 15px;
-
         }
-
-
-        .section-heading h2 span {
-
-            color: var(--gold);
-
-        }
-
 
         .section-heading p {
-
             color: var(--muted);
-
-            max-width: 720px;
-
+            max-width: 700px;
             margin: auto;
-
             line-height: 1.8;
-
-            font-size: 14px;
-
         }
-
 
 
         /* =========================
-           INTRO
+           INTRO SECTION
         ========================= */
 
         .intro-box {
-
-            height: 100%;
-
-            padding: 45px;
-
-            border-radius: 22px;
-
-            background:
-                linear-gradient(145deg,
+            background: linear-gradient(145deg,
                     #1d1d1d,
                     #111111);
 
-            border:
-                1px solid var(--border);
-
-            box-shadow:
-                0 20px 50px rgba(0, 0, 0, 0.25);
-
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 45px;
+            height: 100%;
         }
-
 
         .intro-box h2 {
-
-            font-size:
-                clamp(28px, 4vw, 42px);
-
+            font-size: clamp(28px, 4vw, 42px);
             font-weight: 700;
-
-            line-height: 1.2;
-
-            margin-bottom: 22px;
-
+            margin-bottom: 20px;
         }
-
 
         .intro-box h2 span {
-
             color: var(--gold);
-
         }
-
 
         .intro-box p {
-
             color: #bcbcbc;
-
-            font-size: 15px;
-
             line-height: 1.9;
-
-            margin-bottom: 18px;
-
+            font-size: 15px;
         }
-
 
         .service-tag {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
-
+            margin-top: 18px;
             padding: 8px 15px;
-
-            margin-top: 10px;
-
             border-radius: 30px;
-
-            border:
-                1px solid rgba(212, 175, 55, 0.35);
-
-            background:
-                rgba(212, 175, 55, 0.07);
-
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            background: rgba(212, 175, 55, 0.07);
             color: var(--gold);
-
             font-size: 12px;
-
             font-weight: 600;
-
         }
-
 
 
         /* =========================
-           FEATURES
+           FEATURES CARD
         ========================= */
 
         .features-card {
-
-            height: 100%;
-
-            padding: 35px;
-
-            border-radius: 22px;
-
             background: var(--card);
-
-            border:
-                1px solid var(--border);
-
-            box-shadow:
-                0 20px 50px rgba(0, 0, 0, 0.25);
-
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 35px;
+            height: 100%;
         }
-
 
         .features-card h3 {
-
-            font-size: 26px;
-
+            font-size: 25px;
             font-weight: 700;
-
             margin-bottom: 25px;
-
         }
-
 
         .feature-item {
-
             display: flex;
-
             align-items: center;
-
             gap: 14px;
-
-            padding: 15px 0;
-
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
             color: #ddd;
-
             font-size: 14px;
-
-            border-bottom:
-                1px solid rgba(255, 255, 255, 0.07);
-
         }
-
 
         .feature-item:last-child {
-
             border-bottom: none;
-
         }
-
 
         .feature-item i {
-
             color: var(--gold);
-
             font-size: 19px;
-
             min-width: 25px;
-
         }
-
 
 
         /* =========================
@@ -501,139 +301,74 @@
         ========================= */
 
         .gallery-section {
-
             background: #090909;
-
             padding: 90px 0;
-
         }
-
 
         .gallery-wrapper {
-
             background: var(--card);
-
-            border:
-                1px solid var(--border);
-
+            border: 1px solid var(--border);
             border-radius: 22px;
-
             padding: 12px;
-
             overflow: hidden;
-
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.4);
-
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
         }
-
 
         .carousel {
-
             border-radius: 16px;
-
             overflow: hidden;
-
         }
-
 
         .gallery-img {
-
             width: 100%;
-
             height: 560px;
-
             object-fit: cover;
-
             display: block;
-
         }
-
 
         .carousel-caption {
-
             left: 0;
-
             right: 0;
-
             bottom: 0;
-
-            padding:
-                60px 20px 25px;
-
-            background:
-                linear-gradient(transparent,
-                    rgba(0, 0, 0, 0.90));
-
+            padding: 55px 20px 25px;
+            background: linear-gradient(transparent,
+                    rgba(0, 0, 0, 0.85));
         }
-
 
         .carousel-caption h5 {
-
             color: white;
-
-            font-size: 20px;
-
             font-weight: 600;
-
-            margin-bottom: 5px;
-
         }
-
 
         .carousel-caption p {
-
             color: #ddd;
-
             margin: 0;
-
             font-size: 13px;
-
         }
-
 
         .carousel-control-prev,
         .carousel-control-next {
-
             width: 10%;
-
         }
-
 
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-
-            background-color:
-                rgba(0, 0, 0, 0.65);
-
+            background-color: rgba(0, 0, 0, 0.65);
             border-radius: 50%;
-
             padding: 25px;
-
             background-size: 45%;
-
         }
-
 
         .carousel-indicators button {
-
             width: 28px;
-
             height: 4px;
-
             border: none;
-
             border-radius: 5px;
-
         }
-
 
         .carousel-indicators .active {
-
             background-color: var(--gold);
-
         }
-
 
 
         /* =========================
@@ -641,113 +376,61 @@
         ========================= */
 
         .quote-section {
-
             background:
-
                 radial-gradient(circle at top right,
                     rgba(212, 175, 55, 0.08),
                     transparent 35%),
-
                 #0b0b0b;
-
         }
-
 
         .quote-card {
-
             background: #181818;
-
-            border:
-                1px solid var(--border);
-
+            border: 1px solid var(--border);
             border-radius: 22px;
-
             padding: 40px;
-
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.4);
-
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
         }
-
 
         .form-label {
-
             color: #ddd;
-
             font-size: 13px;
-
             font-weight: 600;
-
         }
-
 
         .form-control {
-
             background: #101010 !important;
-
             color: white !important;
-
-            border:
-                1px solid #333 !important;
-
+            border: 1px solid #333 !important;
             border-radius: 10px;
-
             padding: 13px 15px;
-
         }
-
 
         .form-control:focus {
-
-            border-color:
-                var(--gold) !important;
-
-            box-shadow:
-                0 0 0 0.2rem rgba(212, 175, 55, 0.12) !important;
-
+            border-color: var(--gold) !important;
+            box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.12) !important;
         }
-
 
         .form-control::placeholder {
-
             color: #666;
-
         }
-
 
         .quote-btn {
-
             width: 100%;
-
             border: none;
-
             border-radius: 12px;
-
-            background:
-                linear-gradient(135deg,
+            background: linear-gradient(135deg,
                     #D4AF37,
                     #E8C766);
-
             color: #080808;
-
             font-weight: 700;
-
             padding: 15px;
-
             transition: 0.3s;
-
         }
-
 
         .quote-btn:hover {
-
             transform: translateY(-2px);
-
-            box-shadow:
-                0 10px 25px rgba(212, 175, 55, 0.2);
-
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
         }
-
 
 
         /* =========================
@@ -755,94 +438,51 @@
         ========================= */
 
         footer {
-
             background: #070707;
-
-            border-top:
-                1px solid rgba(212, 175, 55, 0.15);
-
-            padding:
-                55px 0 110px;
-
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 55px 0 110px;
         }
-
 
         .footer-logo {
-
             width: 65px;
-
             height: 65px;
-
             object-fit: contain;
-
             border-radius: 50%;
-
             margin-bottom: 15px;
-
         }
-
 
         footer h5 {
-
             font-weight: 600;
-
             margin-bottom: 15px;
-
         }
-
 
         footer p {
-
             color: #888;
-
             font-size: 13px;
-
             line-height: 1.8;
-
         }
-
 
         .footer-links a {
-
             display: block;
-
             color: #999;
-
             font-size: 13px;
-
             margin-bottom: 10px;
-
             transition: 0.3s;
-
         }
-
 
         .footer-links a:hover {
-
             color: var(--gold);
-
             padding-left: 4px;
-
         }
-
 
         .footer-bottom {
-
-            border-top:
-                1px solid #222;
-
+            border-top: 1px solid #222;
             margin-top: 35px;
-
             padding-top: 20px;
-
             text-align: center;
-
             color: #666;
-
             font-size: 12px;
-
         }
-
 
 
         /* =========================
@@ -850,145 +490,89 @@
         ========================= */
 
         .floating-bar {
-
             position: fixed;
-
             left: 50%;
-
             bottom: 18px;
-
-            transform:
-                translateX(-50%);
-
+            transform: translateX(-50%);
             width: 315px;
-
-            max-width:
-                calc(100% - 30px);
-
+            max-width: calc(100% - 30px);
             height: 65px;
 
-            background:
-                rgba(20, 20, 20, 0.94);
-
+            background: rgba(20, 20, 20, 0.94);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
 
-            -webkit-backdrop-filter:
-                blur(15px);
-
-            border:
-                1px solid rgba(212, 175, 55, 0.3);
-
+            border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 50px;
 
             z-index: 99999;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
             padding: 0 18px;
 
-            box-shadow:
-                0 10px 35px rgba(0, 0, 0, 0.5);
-
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
         }
 
-
         .social-btn {
-
             width: 45px;
-
             height: 45px;
 
             border-radius: 50%;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             color: white !important;
-
             font-size: 21px;
 
             transition: 0.3s;
-
         }
-
 
         .social-btn:hover {
-
-            transform:
-                translateY(-3px);
-
+            transform: translateY(-3px);
         }
 
-
         .instagram {
-
-            background:
-                linear-gradient(45deg,
+            background: linear-gradient(45deg,
                     #f09433,
                     #e6683c,
                     #dc2743,
                     #cc2366,
                     #bc1888);
-
         }
-
 
         .whatsapp {
-
             background: #25D366;
-
         }
 
-
         .floating-logo {
-
             position: absolute;
-
             left: 50%;
-
             top: 50%;
-
-            transform:
-                translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
             width: 72px;
-
             height: 72px;
 
             border-radius: 50%;
-
             background: #111;
 
-            border:
-                3px solid var(--gold);
-
+            border: 3px solid var(--gold);
             padding: 4px;
 
-            box-shadow:
-                0 5px 25px rgba(0, 0, 0, 0.5);
-
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
         }
-
 
         .floating-logo img {
-
             width: 100%;
-
             height: 100%;
-
             border-radius: 50%;
-
             object-fit: cover;
-
         }
-
 
 
         /* =========================
@@ -997,209 +581,145 @@
 
         @media (max-width: 991px) {
 
-            .service-header {
-
-                min-height: 450px;
-
+            .navbar-collapse {
+                background: #121212;
+                border-radius: 15px;
+                margin-top: 12px;
+                padding: 15px;
+                border: 1px solid rgba(212, 175, 55, 0.15);
             }
 
+            .navbar-nav .nav-link {
+                margin: 2px 0;
+            }
+
+            .share-btn {
+                display: inline-block;
+                margin-top: 8px;
+            }
+
+            .service-header {
+                min-height: 440px;
+            }
 
             .section {
-
                 padding: 70px 0;
-
             }
-
 
             .gallery-img {
-
                 height: 450px;
-
             }
-
         }
 
 
         @media (max-width: 767px) {
 
             .navbar-brand {
-
-                font-size: 15px;
-
+                font-size: 16px;
             }
-
 
             .navbar-brand img {
-
-                width: 40px;
-
-                height: 40px;
-
+                width: 42px;
+                height: 42px;
             }
 
+            .brand-text small {
+                font-size: 7px;
+                letter-spacing: 1.5px;
+            }
 
             .service-header {
-
-                min-height: 410px;
-
+                min-height: 400px;
             }
-
 
             .hero-small {
-
                 font-size: 10px;
-
                 letter-spacing: 2.5px;
-
             }
-
 
             .service-header p {
-
                 font-size: 13px;
-
                 line-height: 1.7;
-
             }
-
 
             .section {
-
                 padding: 60px 0;
-
             }
-
 
             .intro-box,
             .features-card,
             .quote-card {
-
-                padding:
-                    25px 20px;
-
+                padding: 25px 20px;
             }
-
 
             .gallery-section {
-
                 padding: 60px 0;
-
             }
-
 
             .gallery-wrapper {
-
                 padding: 7px;
-
                 border-radius: 16px;
-
             }
-
 
             .gallery-img {
-
                 height: 360px;
-
             }
-
 
             .carousel-caption {
-
-                padding:
-                    45px 15px 18px;
-
+                padding: 45px 15px 18px;
             }
-
 
             .carousel-caption h5 {
-
                 font-size: 15px;
-
             }
-
 
             .carousel-caption p {
-
                 font-size: 11px;
-
             }
-
 
             .floating-bar {
-
                 height: 60px;
-
                 bottom: 12px;
-
             }
-
 
             .floating-logo {
-
                 width: 67px;
-
                 height: 67px;
-
             }
-
 
             .social-btn {
-
                 width: 42px;
-
                 height: 42px;
-
             }
-
 
             footer {
-
                 padding-bottom: 95px;
-
             }
-
         }
 
 
         @media (max-width: 380px) {
 
             .floating-bar {
-
-                width:
-                    calc(100% - 20px);
-
+                width: calc(100% - 20px);
             }
-
 
             .floating-logo {
-
                 width: 62px;
-
                 height: 62px;
-
             }
-
 
             .social-btn {
-
                 width: 39px;
-
                 height: 39px;
-
                 font-size: 18px;
-
             }
-
 
             .gallery-img {
-
                 height: 310px;
-
             }
-
         }
     </style>
-
 </head>
 
 
@@ -1207,325 +727,170 @@
 
 
     <!-- =========================
-         NAVBAR
-    ========================= -->
+     NAVBAR
+========================= -->
 
-   <nav id="master-nav" class="navbar navbar-expand-lg fixed-top shadow-sm"
+    <nav id="master-nav" class="navbar navbar-expand-lg fixed-top shadow-sm"
         style="background:linear-gradient(90deg,#000000,#434343);">
-
         <div class="container">
 
-
             <!-- Brand -->
-
             <a class="navbar-brand d-flex align-items-center text-warning fw-bold fs-4" href="index.html">
-
                 <img src="akbar ali logo.jpg" alt="Logo" width="40" class="me-2 rounded-circle shadow">
-
                 Akbar Ali Interior
-
             </a>
 
-
             <!-- Toggler -->
-
             <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar">
-
                 <span class="navbar-toggler-icon"></span>
-
             </button>
 
-
             <!-- Offcanvas -->
-
             <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
-
-
                 <div class="offcanvas-header border-bottom d-lg-none">
-
-                    <h5 class="offcanvas-title fw-bold">
-                        Menu
-                    </h5>
-
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas">
-                    </button>
-
+                    <h5 class="offcanvas-title fw-bold">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
                 </div>
 
-
                 <div class="offcanvas-body">
-
                     <ul class="navbar-nav ms-auto align-items-lg-center">
 
-
-                        <!-- Home -->
-
-                        <li class="nav-item">
-
-                            <a class="nav-link text-white mx-2 fw-semibold" href="index.html">
-
-                                Home
-
-                            </a>
-
+                        <!-- Links -->
+                        <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="index.html">Home</a>
                         </li>
+                        <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="about.html">About
+                                Us</a></li>
 
 
-                        <!-- About -->
-
-                        <li class="nav-item">
-
-                            <a class="nav-link text-white mx-2 fw-semibold" href="about.html">
-
-                                About Us
-
-                            </a>
-
-                        </li>
-
-
-                        <!-- Services -->
-
+                        <!-- Dropdown -->
                         <li class="nav-item dropdown">
-
                             <a class="nav-link dropdown-toggle text-white fw-semibold mx-2" href="#" id="servicesDrop"
                                 data-bs-toggle="dropdown">
-
                                 Services
-
                             </a>
-
-
                             <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3"
                                 style="background:linear-gradient(135deg,#1f1f1f,#3a3a3a);">
 
-
-                                <li>
-
-                                    <a class="dropdown-item text-warning fw-semibold" href="wall.html">
-
-                                        Wall Solutions
-
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="dropdown-item text-warning fw-semibold" href="commercial.html">
-
-                                        Commercial interior
-
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="dropdown-item text-warning fw-semibold" href="pvc.html">
-
-                                        PVC Ceiling & Wall Panel
-
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="dropdown-item text-warning fw-semibold" href="Residential.html">
-
-                                        Residential Interior
-
-                                    </a>
-
-                                </li>
-
-
+                                <li><a class="dropdown-item text-warning fw-semibold" href="Residential.html"> Residences Interior</a></li>
+                                <li><a class="dropdown-item text-warning fw-semibold" href="pvc.html">PVC Ceiling & Wall Panel</a></li>
+                                <li><a class="dropdown-item text-warning fw-semibold" href="commercial.html"> Commercial Interior</a></li>
+                                <li><a class="dropdown-item text-warning fw-semibold" href="furniture.html">Custom Furniture</a></li>
                             </ul>
-
                         </li>
 
+                        <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold"
+                                href="https://drive.google.com/file/d/1xqOlU0jy1bv1Pc18wK4OEiCUOfOj8K_C/view?usp=drivesdk">Portfolio</a>
+                        </li><br>
 
-                        <!-- Portfolio -->
 
+                        <!-- Attractive Share Button -->
                         <li class="nav-item">
-
-                            <a class="nav-link text-white mx-2 fw-semibold"
-                                href="https://drive.google.com/file/d/1xqOlU0jy1bv1Pc18wK4OEiCUOfOj8K_C/view?usp=drivesdk">
-
-                                Portfolio
-
-                            </a>
-
-                        </li>
-
-
-                        <!-- Share -->
-
-                        <li class="nav-item">
-
-                            <button onclick="shareWebsite()" style="padding:10px 22px;
-                                background:linear-gradient(45deg,#ff9800,#ff5722);
-                                color:white;
-                                border:none;
-                                border-radius:25px;
-                                font-weight:bold;
-                                box-shadow:0 4px 12px rgba(0,0,0,0.4);
-                                transition:0.3s;">
-
-                                <i class="fas fa-share-alt"></i>
-
-                                Share
-
+                            <button onclick="shareWebsite()" style="padding:10px 22px; background:linear-gradient(45deg,#ff9800,#ff5722); color:white; 
+                     border:none; border-radius:25px; font-weight:bold; 
+                     box-shadow:0 4px 12px rgba(0,0,0,0.4); transition:0.3s;">
+                                <i class="fas fa-share-alt"></i> Share
                             </button>
-
                         </li>
-
-
                     </ul>
-
                 </div>
-
             </div>
-
         </div>
-
     </nav>
 
 
 
-
     <!-- =========================
-         HERO
-    ========================= -->
+     HERO
+========================= -->
 
     <header class="service-header">
 
-
         <div class="hero-content">
 
-
             <div class="hero-small">
-
                 Akbar Ali Interior
-
             </div>
 
-
             <h1>
-
-                Luxury
-                <span>Furniture</span>
-
+                Wall Solutions 
             </h1>
-
 
             <div class="hero-line"></div>
 
-
             <p>
-
-                Premium furniture solutions designed with quality,
-                functionality and timeless style to enhance modern
-                homes, offices and commercial spaces.
-
+                Crafting smooth and beautiful wall designs
+                with elegant finishing and creative detailing
+                for a premium interior look.
             </p>
 
-
         </div>
-
 
     </header>
 
 
 
     <!-- =========================
-         INTRO
-    ========================= -->
+     INTRO
+========================= -->
 
     <section class="section section-dark">
 
-
         <div class="container">
-
 
             <div class="row g-4 align-items-stretch">
 
 
                 <div class="col-lg-7">
 
-
                     <div class="intro-box">
 
-
                         <div class="mini-title">
-
                             Our Service
-
                         </div>
 
-
                         <h2>
-
-                            Why Choose Our
-                            <span>Luxury Furniture?</span>
-
+                            Why Choose
+                            <span>Wall Solutions</span>
                         </h2>
 
+                        <p>
+                            Wall Solutions is a versatile choice
+                            for creating elegant and attractive wall
+                            designs. It allows us to create smooth
+                            finishes, decorative patterns and customized
+                            designs according to your interior style.
+                        </p>
 
                         <p>
+                            Our expert team focuses on clean finishing,
+                            detailed workmanship and quality execution
+                            to enhance the overall appearance of your
+                            space.
+                        </p>
 
-                            Furniture plays an important role in defining
-                            the look, comfort and functionality of an
-                            interior. Our furniture solutions are designed
-                            to complement your space and match your
+                        <p>
+                            Whether you want a modern feature wall,
+                            decorative pattern or classic POP design,
+                            we create solutions according to your
                             requirements.
-
                         </p>
-
-
-                        <p>
-
-                            At Akbar Ali Interior, we provide customised
-                            furniture solutions with attention to design,
-                            material quality, measurements and finishing.
-
-                        </p>
-
-
-                        <p>
-
-                            From homes and offices to restaurants,
-                            commercial spaces and complete interior
-                            projects, we create furniture according to
-                            your design and requirements.
-
-                        </p>
-
 
                         <div class="service-tag">
 
-                            <i class="fa-solid fa-star">
-                            </i>
+                            <i class="fa-solid fa-star"></i>
 
-                            Premium Quality
+                            Premium Finishing
 
                         </div>
-
 
                         <div class="service-tag ms-2">
 
-                            <i class="fa-solid fa-couch">
-                            </i>
+                            <i class="fa-solid fa-paint-roller"></i>
 
-                            Custom Furniture
+                            Custom Designs
 
                         </div>
-
 
                     </div>
 
@@ -1535,33 +900,23 @@
 
                 <div class="col-lg-5">
 
-
                     <div class="features-card">
 
-
                         <div class="mini-title">
-
                             Benefits
-
                         </div>
 
-
                         <h3>
-
                             Key Features
-
                         </h3>
 
 
                         <div class="feature-item">
 
-                            <i class="fas fa-check-circle">
-                            </i>
+                            <i class="fas fa-check-circle"></i>
 
                             <span>
-
-                                Elegant & Durable Designs
-
+                                Smooth, Seamless Finish
                             </span>
 
                         </div>
@@ -1569,13 +924,10 @@
 
                         <div class="feature-item">
 
-                            <i class="fas fa-check-circle">
-                            </i>
+                            <i class="fas fa-check-circle"></i>
 
                             <span>
-
-                                Customised Furniture Solutions
-
+                                Highly Customizable Designs
                             </span>
 
                         </div>
@@ -1583,13 +935,10 @@
 
                         <div class="feature-item">
 
-                            <i class="fas fa-check-circle">
-                            </i>
+                            <i class="fas fa-check-circle"></i>
 
                             <span>
-
-                                Premium Quality Materials
-
+                                Elegant Decorative Patterns
                             </span>
 
                         </div>
@@ -1597,36 +946,28 @@
 
                         <div class="feature-item">
 
-                            <i class="fas fa-check-circle">
-                            </i>
+                            <i class="fas fa-check-circle"></i>
 
                             <span>
-
-                                Accurate Measurements & Fitting
-
-                            </span>
-
-                        </div>
-
-
-                        <div class="feature-item">
-
-                            <i class="fas fa-check-circle">
-                            </i>
-
-                            <span>
-
                                 Professional Finishing
-
                             </span>
 
                         </div>
 
+
+                        <div class="feature-item">
+
+                            <i class="fas fa-check-circle"></i>
+
+                            <span>
+                                Durable Interior Solution
+                            </span>
+
+                        </div>
 
                     </div>
 
                 </div>
-
 
             </div>
 
@@ -1637,73 +978,53 @@
 
 
     <!-- =========================
-         GALLERY
-    ========================= -->
+     PROJECT GALLERY
+========================= -->
 
     <section class="gallery-section">
 
-
         <div class="container">
-
 
             <div class="section-heading">
 
 
-                <div class="mini-title">
-
-                    Our Work
-
-                </div>
-
-
                 <h2>
-
-                    Our Furniture
-                    <span>Projects</span>
-
+                     Wall
+                    <span style="color:#D4AF37;">
+                        Projects
+                    </span>
                 </h2>
 
-
                 <p>
-
-                    Explore our furniture work featuring modern designs,
-                    quality materials and professional finishing.
-
+                    Explore some of our wall design work
+                    and finishing.
                 </p>
-
 
             </div>
 
 
-
             <div class="gallery-wrapper">
 
-
-                <div id="furnitureProjectsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div id="popProjectsCarousel" class="carousel slide" data-bs-ride="carousel">
 
 
                     <!-- Indicators -->
 
                     <div class="carousel-indicators">
 
-
-                        <button type="button" data-bs-target="#furnitureProjectsCarousel" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1">
+                        <button type="button" data-bs-target="#popProjectsCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1">
                         </button>
 
-
-                        <button type="button" data-bs-target="#furnitureProjectsCarousel" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#popProjectsCarousel" data-bs-slide-to="1"
                             aria-label="Slide 2">
                         </button>
 
-
-                        <button type="button" data-bs-target="#furnitureProjectsCarousel" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#popProjectsCarousel" data-bs-slide-to="2"
                             aria-label="Slide 3">
                         </button>
 
-
                     </div>
-
 
 
                     <!-- Slides -->
@@ -1713,92 +1034,27 @@
 
                         <div class="carousel-item active">
 
+                            <img src="wall 1.jpeg" class="gallery-img" alt=" Wall Design Project 1">
 
-                            <img src="furniture 1.jpg" class="gallery-img" alt="Luxury Furniture Project 1">
-
-
-                            <div class="carousel-caption">
-
-
-                                <h5>
-
-                                    Custom Furniture Design
-
-                                </h5>
-
-
-                                <p>
-
-                                    Premium furniture designed to
-                                    complement modern interiors.
-
-                                </p>
-
-
-                            </div>
-
+                           
 
                         </div>
 
 
-
                         <div class="carousel-item">
 
+                            <img src="wall 2.jpeg" class="gallery-img" alt=" Wall Design Project 2">
 
-                            <img src="furniture 2.jpg" class="gallery-img" alt="Luxury Furniture Project 2">
-
-
-                            <div class="carousel-caption">
-
-
-                                <h5>
-
-                                    Modern Furniture
-
-                                </h5>
-
-
-                                <p>
-
-                                    Functional and elegant furniture
-                                    solutions for your space.
-
-                                </p>
-
-
-                            </div>
-
+                           
 
                         </div>
 
 
-
                         <div class="carousel-item">
 
+                            <img src="wall 3.jpeg" class="gallery-img" alt=" Wall Design Project 3">
 
-                            <img src="furniture 5.jpg" class="gallery-img" alt="Luxury Furniture Project 3">
-
-
-                            <div class="carousel-caption">
-
-
-                                <h5>
-
-                                    Premium Interior Furniture
-
-                                </h5>
-
-
-                                <p>
-
-                                    Stylish furniture with professional
-                                    finishing and attention to detail.
-
-                                </p>
-
-
-                            </div>
-
+                            
 
                         </div>
 
@@ -1806,44 +1062,32 @@
                     </div>
 
 
-
                     <!-- Previous -->
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#furnitureProjectsCarousel"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#popProjectsCarousel"
                         data-bs-slide="prev">
-
 
                         <span class="carousel-control-prev-icon" aria-hidden="true">
                         </span>
 
-
                         <span class="visually-hidden">
-
                             Previous
-
                         </span>
-
 
                     </button>
 
 
-
                     <!-- Next -->
 
-                    <button class="carousel-control-next" type="button" data-bs-target="#furnitureProjectsCarousel"
+                    <button class="carousel-control-next" type="button" data-bs-target="#popProjectsCarousel"
                         data-bs-slide="next">
-
 
                         <span class="carousel-control-next-icon" aria-hidden="true">
                         </span>
 
-
                         <span class="visually-hidden">
-
                             Next
-
                         </span>
-
 
                     </button>
 
@@ -1859,54 +1103,40 @@
 
 
     <!-- =========================
-         FREE QUOTE
-    ========================= -->
+     FREE QUOTE
+========================= -->
 
     <section class="section quote-section">
 
-
         <div class="container">
-
 
             <div class="section-heading">
 
-
                 <div class="mini-title">
-
                     Get Started
-
                 </div>
 
-
                 <h2>
-
                     Get A
-                    <span>Free Quote</span>
-
+                    <span style="color:#D4AF37;">
+                        Free Quote
+                    </span>
                 </h2>
 
-
                 <p>
-
-                    Interested in our furniture service?
-                    Tell us about your project and get a personalised
-                    quotation from our team.
-
+                    Interested in our Wall Solutions service?
+                    Tell us about your project and get a
+                    personalized quotation.
                 </p>
-
 
             </div>
 
 
-
             <div class="row justify-content-center">
-
 
                 <div class="col-lg-9">
 
-
                     <div class="quote-card">
-
 
                         <form action="https://formspree.io/f/xrbyabwd" method="POST">
 
@@ -1918,13 +1148,11 @@
 
                                 <div class="col-md-6">
 
-
                                     <label for="nameInput" class="form-label">
 
                                         Your Name
 
                                     </label>
-
 
                                     <input type="text" class="form-control" id="nameInput" name="Name"
                                         placeholder="Enter your name" required>
@@ -1932,11 +1160,9 @@
                                 </div>
 
 
-
                                 <!-- Phone -->
 
                                 <div class="col-md-6">
-
 
                                     <label for="phoneInput" class="form-label">
 
@@ -1944,18 +1170,15 @@
 
                                     </label>
 
-
                                     <input type="tel" class="form-control" id="phoneInput" name="Phone Number"
                                         placeholder="+91 XXXXX XXXXX" required>
 
                                 </div>
 
 
-
                                 <!-- Email -->
 
                                 <div class="col-md-6">
-
 
                                     <label for="emailInput" class="form-label">
 
@@ -1963,18 +1186,15 @@
 
                                     </label>
 
-
                                     <input type="email" class="form-control" id="emailInput" name="Email"
                                         placeholder="Enter your email" required>
 
                                 </div>
 
 
-
                                 <!-- Location -->
 
                                 <div class="col-md-6">
-
 
                                     <label for="addressInput" class="form-label">
 
@@ -1982,60 +1202,46 @@
 
                                     </label>
 
-
                                     <input type="text" class="form-control" id="addressInput" name="Location"
                                         placeholder="Enter your location">
 
                                 </div>
 
 
-
                                 <!-- Project -->
 
                                 <div class="col-12">
 
-
                                     <label for="projectDetails" class="form-label">
 
-                                        Tell Us About Your Furniture Project
+                                        Tell Us About Your Project
 
                                     </label>
 
-
                                     <textarea class="form-control" id="projectDetails" name="Project Details" rows="5"
-                                        placeholder="Tell us about your furniture requirements..."></textarea>
-
+                                        placeholder="Tell us about your POP wall project..."></textarea>
 
                                 </div>
-
 
 
                                 <!-- Submit -->
 
                                 <div class="col-12">
 
-
                                     <button type="submit" class="quote-btn">
 
-
-                                        <i class="fa-solid fa-paper-plane me-2">
-                                        </i>
-
+                                        <i class="fa-solid fa-paper-plane me-2"></i>
 
                                         Get My Free Quote
 
-
                                     </button>
-
 
                                 </div>
 
 
                             </div>
 
-
                         </form>
-
 
                     </div>
 
@@ -2043,120 +1249,82 @@
 
             </div>
 
-
         </div>
-
 
     </section>
 
 
 
     <!-- =========================
-         FOOTER
-    ========================= -->
+     FOOTER
+========================= -->
 
     <footer>
 
-
         <div class="container">
-
 
             <div class="row g-4">
 
 
                 <div class="col-lg-5">
 
-
                     <img src="full logo .jpeg" class="footer-logo" alt="Akbar Ali Interior">
 
-
                     <h5>
-
                         Akbar Ali Interior
-
                     </h5>
 
-
                     <p>
-
                         Professional interior design and execution
                         solutions focused on quality, creativity
                         and customer satisfaction.
-
                     </p>
 
-
-                    <p style="
-                        color:#D4AF37;
-                        font-weight:600;
-                        ">
-
+                    <p style="color:#D4AF37; font-weight:600;">
                         WE DESIGN • WE BUILD • YOU LIVE
-
                     </p>
-
 
                 </div>
-
 
 
                 <div class="col-6 col-lg-3">
 
-
                     <h5>
-
                         Quick Links
-
                     </h5>
-
 
                     <div class="footer-links">
 
-
                         <a href="index.html">
-
                             Home
-
                         </a>
-
 
                         <a href="about.html">
-
                             About Us
-
                         </a>
+
+                       
 
                         <a href="index.html#services">
-
                             Services
-
                         </a>
 
-
                     </div>
-
 
                 </div>
 
 
-
                 <div class="col-6 col-lg-4">
 
-
                     <h5>
-
                         Get In Touch
-
                     </h5>
-
 
                     <div class="footer-links">
 
-
                         <a href="tel:+918356855616">
 
-                            <i class="fa-solid fa-phone me-2">
-                            </i>
+                            <i class="fa-solid fa-phone me-2"></i>
 
                             +91 8356855616
 
@@ -2165,8 +1333,7 @@
 
                         <a href="https://wa.me/919930433186" target="_blank">
 
-                            <i class="fa-brands fa-whatsapp me-2">
-                            </i>
+                            <i class="fa-brands fa-whatsapp me-2"></i>
 
                             +91 9930433186
 
@@ -2175,8 +1342,7 @@
 
                         <a href="mailto:akbaraliinterior9197@gmail.com">
 
-                            <i class="fa-solid fa-envelope me-2">
-                            </i>
+                            <i class="fa-solid fa-envelope me-2"></i>
 
                             Email Us
 
@@ -2185,22 +1351,18 @@
 
                         <a href="https://www.instagram.com/akbaraliinterior" target="_blank">
 
-                            <i class="fa-brands fa-instagram me-2">
-                            </i>
+                            <i class="fa-brands fa-instagram me-2"></i>
 
                             Instagram
 
                         </a>
 
-
                     </div>
-
 
                 </div>
 
 
             </div>
-
 
 
             <div class="footer-bottom">
@@ -2210,7 +1372,6 @@
 
             </div>
 
-
         </div>
 
     </footer>
@@ -2218,34 +1379,29 @@
 
 
     <!-- =========================
-         FLOATING SOCIAL BAR
-    ========================= -->
+     FLOATING SOCIAL BAR
+========================= -->
 
     <div class="floating-bar">
 
 
-        <a href="https://www.instagram.com/akbaraliinterior" target="_blank" class="social-btn instagram"
-            aria-label="Instagram">
+        <a href="https://www.instagram.com/akbaraliinterior" target="_blank" class="social-btn instagram">
 
-            <i class="fa-brands fa-instagram">
-            </i>
+            <i class="fa-brands fa-instagram"></i>
 
         </a>
 
 
-
-        <a href="index.html" class="floating-logo" aria-label="Home">
+        <a href="index.html" class="floating-logo">
 
             <img src="full logo .jpeg" alt="Akbar Ali Interior">
 
         </a>
 
 
+        <a href="https://wa.me/919930433186" target="_blank" class="social-btn whatsapp">
 
-        <a href="https://wa.me/919930433186" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp">
-
-            <i class="fa-brands fa-whatsapp">
-            </i>
+            <i class="fa-brands fa-whatsapp"></i>
 
         </a>
 
@@ -2255,13 +1411,8 @@
 
 
     <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-
-
-    <!-- Share Website -->
 
     <script>
 
@@ -2270,42 +1421,19 @@
             const websiteURL =
                 "https://altafkhan01017-star.github.io/akbar-ali/";
 
-
             if (navigator.share) {
 
                 navigator.share({
-
-                    title:
-                        "Akbar Ali Interior",
-
-                    text:
-                        "Check out Akbar Ali Interior",
-
-                    url:
-                        websiteURL
-
+                    title: "Akbar Ali Interior",
+                    text: "Check out Akbar Ali Interior",
+                    url: websiteURL
                 });
 
             } else {
 
-                navigator.clipboard
-                    .writeText(websiteURL)
+                navigator.clipboard.writeText(websiteURL);
 
-                    .then(function () {
-
-                        alert(
-                            "Website link copied!"
-                        );
-
-                    })
-
-                    .catch(function () {
-
-                        alert(
-                            "Please copy the website link manually."
-                        );
-
-                    });
+                alert("Website link copied!");
 
             }
 

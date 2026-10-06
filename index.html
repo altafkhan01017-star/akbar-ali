@@ -35,512 +35,1558 @@
         /* Navbar Sticky Settings */
 
 
-/* NAVBAR FREEZE LOGIC */
-/* Navbar ko screen par jamane ke liye */
-#master-nav {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    z-index: 9999999 !important; /* 7 baar 9 taaki koi iske upar na aaye */
-    display: flex !important;
-    background-color: white !important;
-}
+        /* NAVBAR FREEZE LOGIC */
+        /* Navbar ko screen par jamane ke liye */
+        #master-nav {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 9999999 !important;
+            /* 7 baar 9 taaki koi iske upar na aaye */
+            display: flex !important;
+            background-color: white !important;
+        }
 
-/* Mobile browser ke address bar ka issue theek karne ke liye */
-html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow-x: hidden !important; /* Side scroll band */
-    height: auto !important;
-}
+        /* Mobile browser ke address bar ka issue theek karne ke liye */
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden !important;
+            /* Side scroll band */
+            height: auto !important;
+        }
 
-/* Content ko navbar ke niche dhakelnay ke liye */
-body {
-    padding-top: 80px !important; 
-}
+        /* Content ko navbar ke niche dhakelnay ke liye */
+        body {
+            padding-top: 80px !important;
 
-@media (max-width: 991px) {
-    body {
-        padding-top: 70px !important;
-    }
-}
-/* Instagram Brand Color */
-.text-instagram {
-    color: #E1306C !important;
-}
+        }
 
-/* Navbar Sticky Position */
-.sticky-top {
-    top: 0;
-    z-index: 1030;
-    background-color: #fff !important;
-}
+        @media (max-width: 991px) {
+            body {
+                padding-top: 70px !important;
+            }
+        }
 
-/* Button Custom Style */
-.nav-contact-btn {
-    background-color: #000 !important;
-    border-radius: 50px !important;
-    font-weight: 600 !important;
-    transition: 0.3s;
-}
+        /* Instagram Brand Color */
+        .text-instagram {
+            color: #E1306C !important;
+        }
 
-/* Laptop (Desktop) Settings */
-@media (min-width: 992px) {
-    .offcanvas {
-        visibility: visible !important;
-        transform: none !important;
-        position: static !important;
-        display: block !important;
-        width: auto !important;
-        background: none !important;
-        box-shadow: none !important;
-    }
-    
-    .offcanvas-body {
-        padding: 0 !important;
-        overflow: visible !important;
-    }
+        /* Navbar Sticky Position */
+        .sticky-top {
+            top: 0;
+            z-index: 1030;
+            background-color: #fff !important;
+        }
 
-    /* Hover par dropdown khulne ka fix */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-}
+        /* Button Custom Style */
+        .nav-contact-btn {
+            background-color: #000 !important;
+            border-radius: 50px !important;
+            font-weight: 600 !important;
+            transition: 0.3s;
+        }
 
-/* Mobile Sidebar Settings */
-@media (max-width: 991px) {
-    .offcanvas {
-        width: 280px !important;
-    }
-    .nav-link {
-        padding: 12px 0 !important;
-        border-bottom: 1px solid #f1f1f1;
-    }
-}
+        /* Laptop (Desktop) Settings */
+        @media (min-width: 992px) {
+            .offcanvas {
+                visibility: visible !important;
+                transform: none !important;
+                position: static !important;
+                display: block !important;
+                width: auto !important;
+                background: none !important;
+                box-shadow: none !important;
+            }
+
+            .offcanvas-body {
+                padding: 0 !important;
+                overflow: visible !important;
+            }
+
+            /* Hover par dropdown khulne ka fix */
+            .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        /* Mobile Sidebar Settings */
+        @media (max-width: 991px) {
+            .offcanvas {
+                width: 280px !important;
+            }
+
+            .nav-link {
+                padding: 12px 0 !important;
+                border-bottom: 1px solid #f1f1f1;
+            }
+        }
 
 
-
+ body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+            width: 100%;
+        }
 
         /* Card Background Styling */
-/* POP Wall Punning Card Specific */
-.pop-card-bg {
-    background-image: url('pop 1.png'); /* Apni high-quality image yahan dalen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    min-height: 280px;
-    /* Image quality maintain karne ke liye */
-    image-rendering: auto; 
+        /* POP Wall Punning Card Specific */
+        .pop-card-bg {
+            background-image: url('pop 1.png');
+            /* Apni high-quality image yahan dalen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            /* Image quality maintain karne ke liye */
+            image-rendering: auto;
+        }
+
+        /* Glass Overlay (Text ko readability deta hai bina image blur kiye) */
+        .glass-overlay {
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Bohat halka white */
+            backdrop-filter: blur(3px);
+            /* Glass look */
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+            transition: all 0.4s ease;
+        }
+
+        /* Hover par image ekdum saaf (No blur) */
+        .pop-card-bg:hover .glass-overlay {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+        }
+
+        /* Text styling for contrast */
+        .pop-card-bg .card-title {
+            color: #000;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+            font-weight: 800;
+        }
+
+        .pop-card-bg .card-text {
+            color: #111;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+
+
+
+        .painting-card-bg {
+            background-image: url('painting1.jpeg');
+            /* Apni high-quality image yahan dalen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            /* Image quality maintain karne ke liye */
+            image-rendering: auto;
+        }
+
+        /* Glass Overlay (Text ko readability deta hai bina image blur kiye) */
+        .glass-overlay {
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Bohat halka white */
+            backdrop-filter: blur(3px);
+            /* Glass look */
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+            transition: all 0.4s ease;
+        }
+
+        /* Hover par image ekdum saaf (No blur) */
+        .painting-card-bg:hover .glass-overlay {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+        }
+
+        /* Text styling for contrast */
+        .painting-card-bg .card-title {
+            color: #000;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+            font-weight: 800;
+        }
+
+        .painting-card-bg .card-text {
+            color: #111;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+
+        .painting-card-bg {
+            background-image: url('painting1.jpeg');
+            /* Apni high-quality image yahan dalen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            /* Image quality maintain karne ke liye */
+            image-rendering: auto;
+        }
+
+        /* Glass Overlay (Text ko readability deta hai bina image blur kiye) */
+        .glass-overlay {
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Bohat halka white */
+            backdrop-filter: blur(3px);
+            /* Glass look */
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+            transition: all 0.4s ease;
+        }
+
+        /* Hover par image ekdum saaf (No blur) */
+        .painting-card-bg:hover .glass-overlay {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+        }
+
+        /* Text styling for contrast */
+        .painting-card-bg .card-title {
+            color: #000;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+            font-weight: 800;
+        }
+
+        .painting-card-bg .card-text {
+            color: #111;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+
+
+
+
+
+
+
+        .furniture-card-bg {
+            background-image: url('furniture.jpg');
+            /* Apni high-quality image yahan dalen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            /* Image quality maintain karne ke liye */
+            image-rendering: auto;
+        }
+
+        /* Glass Overlay (Text ko readability deta hai bina image blur kiye) */
+        .glass-overlay {
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Bohat halka white */
+            backdrop-filter: blur(3px);
+            /* Glass look */
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+            transition: all 0.4s ease;
+        }
+
+        /* Hover par image ekdum saaf (No blur) */
+        .furniture-card-bg:hover .glass-overlay {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+        }
+
+        /* Text styling for contrast */
+        .furniture-card-bg .card-title {
+            color: #000;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+            font-weight: 800;
+        }
+
+        .furniture-card-bg .card-text {
+            color: #111;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+
+
+        /* PVC Card Specific Styling */
+        .gypsum-card-bg {
+            background-image: url('gypsum ceiling 3.png');
+            /* Apni high-quality PVC image ka naam yahan likhen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            /* Thoda bada rakha hai taaki image saaf dikhe */
+        }
+
+        /* Sharp Overlay (Parda bilkul halka hai taaki blur na lage) */
+        .card-overlay-sharp {
+            background-color: rgba(255, 255, 255, 0.25);
+            /* Sirf 25% parda */
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+            transition: 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hover effect: Jab mouse le jayenge to image aur clear ho jayegi */
+        .gypsum-card-bg:hover .card-overlay-sharp {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Text ko image ke upar ubhaarne ke liye (Shadow effect) */
+        .gypsum-card-bg .card-title {
+            color: #000;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
+        }
+
+        .gypsum-card-bg .card-text {
+            color: #111;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+
+        /* PVC Card Specific Styling */
+        .pvc-card-bg {
+            background-image: url('pvc 3.png');
+            /* Apni high-quality PVC image ka naam yahan likhen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            /* Thoda bada rakha hai taaki image saaf dikhe */
+        }
+
+        /* Sharp Overlay (Parda bilkul halka hai taaki blur na lage) */
+        .card-overlay-sharp {
+            background-color: rgba(255, 255, 255, 0.25);
+            /* Sirf 25% parda */
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+            transition: 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hover effect: Jab mouse le jayenge to image aur clear ho jayegi */
+        .pvc-card-bg:hover .card-overlay-sharp {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Text ko image ke upar ubhaarne ke liye (Shadow effect) */
+        .pvc-card-bg .card-title {
+            color: #000;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
+        }
+
+        .pvc-card-bg .card-text {
+            color: #111;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Modular Ceiling Card Specific */
+        .modular-card-bg {
+            background-image: url('modular 2.png');
+            /* Apni image ka naam yahan likhen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+        }
+
+        /* Glass Overlay: Yeh image ko blur nahi karta, sirf parda "premium" banata hai */
+        .glass-overlay {
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Bilkul halka safed */
+            backdrop-filter: blur(2px);
+            /* Sirf halka sa glass effect */
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+            transition: 0.4s ease;
+        }
+
+        /* Hover karne par glass effect hat jayega aur image ekdum clear dikhegi */
+        .modular-card-bg:hover .glass-overlay {
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+        }
+
+        /* Title and Text Styling */
+        .modular-card-bg .card-title {
+            color: #000;
+            text-shadow: 1px 1px 4px rgba(255, 255, 255, 1);
+            /* Text ke piche safed chamak */
+        }
+
+        .modular-card-bg .card-text {
+            color: #111;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+
+
+        /* Floating Footer Main Style */
+      .floating-bar {
+            position: fixed;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            width: 315px;
+            max-width: calc(100% - 30px);
+            height: 65px;
+            background: rgba(20,20,20,0.94);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 50px;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 18px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+        }
+
+       .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white !important;
+            font-size: 21px;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .instagram {
+            background: linear-gradient(
+                45deg,
+                #f09433,
+                #e6683c,
+                #dc2743,
+                #cc2366,
+                #bc1888
+            );
+        }
+
+        .whatsapp {
+            background: #25D366;
+        }
+
+.floating-logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: #111;
+            border: 3px solid var(--gold);
+            padding: 4px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .floating-logo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+       
+        /* Laptop par adjustments */
+        @media (min-width: 992px) {
+            .floating-footer {
+                bottom: 30px;
+                width: 350px;
+            }
+        }
+
+
+        .service-card {
+            height: 100%;
+            min-height: 350px;
+
+            position: relative;
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            border: 1px solid var(--border);
+
+            background-color: var(--card);
+
+            background-size: cover;
+            background-position: center;
+
+            transition: .4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--gold);
+
+            box-shadow:
+                0 20px 45px rgba(0, 0, 0, .45),
+                0 0 25px rgba(212, 169, 78, .08);
+        }
+
+        .service-overlay {
+            min-height: 350px;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 28px;
+
+            background:
+                linear-gradient(to top,
+                    rgba(0, 0, 0, .96),
+                    rgba(0, 0, 0, .45),
+                    rgba(0, 0, 0, .18));
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: rgba(212, 169, 78, .12);
+
+            border: 1px solid var(--border);
+
+            color: var(--gold);
+
+            font-size: 23px;
+
+            margin-bottom: auto;
+        }
+
+        .service-card h4 {
+            color: #fff;
+
+            font-weight: 900;
+
+            margin-top: 35px;
+        }
+
+        .service-card p {
+            color: #ddd1d1;
+
+            line-height: 1.6;
+        }
+
+        .service-btn {
+            display: inline-block;
+            width: fit-content;
+
+            background: var(--gold);
+            color: #000;
+
+            padding: 10px 20px;
+
+            border-radius: 30px;
+
+            font-weight: 800;
+
+            transition: .3s;
+        }
+
+        .service-btn:hover {
+            background: var(--gold-light);
+            color: #000;
+        }
+
+        .pop-card {
+            background-image: url('pop 1.png');
+        }
+
+        .gypsum-card {
+            background-image: url('gypsum ceiling 3.png');
+        }
+
+        .pvc-card {
+            background-image: url('pvc 3.png');
+        }
+
+        .modular-card {
+            background-image: url('modular 2.png');
+        }
+
+        .furniture-card {
+            background-image: url('furniture.jpg');
+        }
+
+        .painting-card {
+            background-image: url('painting1.jpeg');
+        }
+
+        .full-interior-card {
+            background-image: url('home page.jpg');
+        }
+
+
+.section {
+            padding: 90px 0;
+            width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--grey);
+
+            max-width: 750px;
+            margin: auto;
+
+            line-height: 1.8;
+        }
+
+        .gold-line {
+            width: 55px;
+            height: 3px;
+
+            background: var(--gold);
+
+            margin: 18px auto;
+        }
+
+ ::selection {
+            background: var(--gold);
+            color: #000;
+        }
+
+         a {
+            text-decoration: none;
+        }
+
+         body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+         :root {
+            --bg: #0E0E0E;
+            --card: #1B1B1B;
+            --gold: #D4A94E;
+            --gold-light: #F0C96A;
+            --text: #FFFFFF;
+            --grey: #B3B3B3;
+            --border: rgba(212,169,78,0.35);
+        }
+
+
+.hero {
+            min-height: 100vh;
+            min-height: 100svh;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.68),
+                    rgba(0,0,0,.84)
+                ),
+                url('home page.jpg');
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 900px;
+
+            padding: 140px 20px 100px;
+
+            text-align: center;
+        }
+
+        .hero-logo {
+            width: 105px;
+            height: 105px;
+
+            object-fit: cover;
+            border-radius: 50%;
+
+            border: 2px solid var(--gold);
+            padding: 4px;
+
+            margin-bottom: 25px;
+
+            box-shadow:
+                0 0 35px rgba(212,169,78,.20);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 900;
+
+            margin-bottom: 12px;
+            line-height: 1.05;
+
+            word-break: keep-all;
+        }
+
+        .gold {
+            color: var(--gold);
+        }
+
+        .hero-tagline {
+            color: var(--gold);
+
+            font-size: clamp(.8rem, 2vw, 1rem);
+
+            letter-spacing: 4px;
+            font-weight: 600;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #ddd;
+
+            max-width: 680px;
+            margin: auto;
+
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            margin-top: 32px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #000;
+
+            border: none;
+            border-radius: 50px;
+
+            font-weight: 800;
+            padding: 14px 30px;
+
+            transition: .3s;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            color: #000;
+
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-gold {
+            color: var(--gold);
+
+            border: 1px solid var(--gold);
+            border-radius: 50px;
+
+            font-weight: 700;
+            padding: 14px 30px;
+
+            transition: .3s;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+.why-card {
+            height: 100%;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            transition: .3s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+
+            border-color: var(--gold);
+        }
+
+        .why-icon {
+            color: var(--gold);
+
+            font-size: 35px;
+
+            margin-bottom: 18px;
+        }
+
+        .why-card h4 {
+            font-weight: 800;
+        }
+
+        .why-card p {
+            color: var(--grey);
+
+            line-height: 1.7;
+        }
+
+ .contact-section {
+            background: #111;
+        }
+
+        .contact-card {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            height: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 18px;
+
+            padding: 18px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            color: var(--gold);
+
+            background: rgba(212,169,78,.10);
+
+            border: 1px solid var(--border);
+        }
+
+        .contact-item h5 {
+            margin-bottom: 5px;
+
+            font-weight: 800;
+        }
+
+        .contact-item p {
+            margin: 0;
+
+            color: var(--grey);
+
+            line-height: 1.6;
+
+            word-break: break-word;
+        }
+
+        .contact-item a {
+            color: inherit;
+        }
+
+        .contact-item a:hover p {
+            color: var(--gold);
+        }
+
+         .quote-section {
+            background: var(--bg);
+        }
+
+        .quote-box {
+            width: 100%;
+            max-width: 850px;
+
+            margin: auto;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 25px;
+
+            padding: clamp(20px, 5vw, 45px);
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.35);
+        }
+
+        .form-label {
+            color: #fff;
+
+            font-weight: 700;
+        }
+
+        .form-control,
+        .form-control:focus {
+
+            background: #101010;
+
+            color: #fff;
+
+            border: 1px solid rgba(212,169,78,.30);
+
+            border-radius: 12px;
+
+            padding: 13px 15px;
+
+            box-shadow: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--gold);
+        }
+
+        .form-control::placeholder {
+            color: #777;
+        }
+
+        textarea.form-control {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .main-footer {
+            background: #080808;
+
+            border-top: 1px solid rgba(212,169,78,.15);
+
+            padding: 50px 20px 120px;
+
+            text-align: center;
+        }
+
+        .main-footer h4 {
+            font-weight: 900;
+        }
+
+        .main-footer p {
+            color: var(--grey);
+        }
+
+        .footer-gold {
+            color: var(--gold);
+        }
+
+/* ================= APP PROMOTION ================= */
+.app-section {
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at 85% 30%, rgba(212,175,55,0.13), transparent 35%),
+        linear-gradient(135deg, #121212, #070707);
+    border-top: 1px solid rgba(212,175,55,0.20);
+    border-bottom: 1px solid rgba(212,175,55,0.20);
 }
 
-/* Glass Overlay (Text ko readability deta hai bina image blur kiye) */
-.glass-overlay {
-    background-color: rgba(255, 255, 255, 0.2); /* Bohat halka white */
-    backdrop-filter: blur(3px); /* Glass look */
-    height: 100%;
-    width: 100%;
-    padding: 25px;
-    transition: all 0.4s ease;
+.app-banner {
+    max-width: 1150px;
+    margin: auto;
+    padding: 45px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #1c1c1c, #101010);
+    border: 1px solid rgba(212,175,55,0.35);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.45);
 }
 
-/* Hover par image ekdum saaf (No blur) */
-.pop-card-bg:hover .glass-overlay {
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(0px);
-}
-
-/* Text styling for contrast */
-.pop-card-bg .card-title {
-    color: #000;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
-    font-weight: 800;
-}
-
-.pop-card-bg .card-text {
-    color: #111;
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-}
-
-
-
-
-
-
-
-.furniture-card-bg {
-    background-image: url('furniture.jpg'); /* Apni high-quality image yahan dalen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    min-height: 280px;
-    /* Image quality maintain karne ke liye */
-    image-rendering: auto; 
-}
-
-/* Glass Overlay (Text ko readability deta hai bina image blur kiye) */
-.glass-overlay {
-    background-color: rgba(255, 255, 255, 0.2); /* Bohat halka white */
-    backdrop-filter: blur(3px); /* Glass look */
-    height: 100%;
-    width: 100%;
-    padding: 25px;
-    transition: all 0.4s ease;
-}
-
-/* Hover par image ekdum saaf (No blur) */
-.furniture-card-bg:hover .glass-overlay {
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(0px);
-}
-
-/* Text styling for contrast */
-.furniture-card-bg .card-title {
-    color: #000;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
-    font-weight: 800;
-}
-
-.furniture-card-bg .card-text {
-    color: #111;
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-}
-
-
-
-/* PVC Card Specific Styling */
-.gypsum-card-bg {
-    background-image: url('gypsum ceiling 3.png'); /* Apni high-quality PVC image ka naam yahan likhen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    min-height: 280px; /* Thoda bada rakha hai taaki image saaf dikhe */
-}
-
-/* Sharp Overlay (Parda bilkul halka hai taaki blur na lage) */
-.card-overlay-sharp {
-    background-color: rgba(255, 255, 255, 0.25); /* Sirf 25% parda */
-    height: 100%;
-    width: 100%;
-    padding: 25px;
-    transition: 0.4s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Hover effect: Jab mouse le jayenge to image aur clear ho jayegi */
-.gypsum-card-bg:hover .card-overlay-sharp {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Text ko image ke upar ubhaarne ke liye (Shadow effect) */
-.gypsum-card-bg .card-title {
-    color: #000;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
-}
-
-.gypsum-card-bg .card-text {
-    color: #111;
-    font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-
-
-
-
-
-
-
-/* PVC Card Specific Styling */
-.pvc-card-bg {
-    background-image: url('pvc 3.png'); /* Apni high-quality PVC image ka naam yahan likhen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    min-height: 280px; /* Thoda bada rakha hai taaki image saaf dikhe */
-}
-
-/* Sharp Overlay (Parda bilkul halka hai taaki blur na lage) */
-.card-overlay-sharp {
-    background-color: rgba(255, 255, 255, 0.25); /* Sirf 25% parda */
-    height: 100%;
-    width: 100%;
-    padding: 25px;
-    transition: 0.4s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Hover effect: Jab mouse le jayenge to image aur clear ho jayegi */
-.pvc-card-bg:hover .card-overlay-sharp {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Text ko image ke upar ubhaarne ke liye (Shadow effect) */
-.pvc-card-bg .card-title {
-    color: #000;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
-}
-
-.pvc-card-bg .card-text {
-    color: #111;
-    font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-/* Modular Ceiling Card Specific */
-.modular-card-bg {
-    background-image: url('modular 2.png'); /* Apni image ka naam yahan likhen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    min-height: 280px;
-}
-
-/* Glass Overlay: Yeh image ko blur nahi karta, sirf parda "premium" banata hai */
-.glass-overlay {
-    background-color: rgba(255, 255, 255, 0.2); /* Bilkul halka safed */
-    backdrop-filter: blur(2px); /* Sirf halka sa glass effect */
-    height: 100%;
-    width: 100%;
-    padding: 25px;
-    transition: 0.4s ease;
-}
-
-/* Hover karne par glass effect hat jayega aur image ekdum clear dikhegi */
-.modular-card-bg:hover .glass-overlay {
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(0px);
-}
-
-/* Title and Text Styling */
-.modular-card-bg .card-title {
-    color: #000;
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 1); /* Text ke piche safed chamak */
-}
-
-.modular-card-bg .card-text {
-    color: #111;
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-}
-
-
-
-/* Floating Footer Main Style */
-.floating-footer {
-    position: fixed;
-    bottom: 20px; /* Niche se thoda upar floating look ke liye */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 400px; /* Laptop par bhi chota aur sundar dikhega */
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    height: 60px;
-    border-radius: 50px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    z-index: 9999;
+.app-banner-content {
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    border: 1px solid rgba(255,255,255,0.3);
+    gap: 40px;
 }
 
-/* Center Logo Styling */
-.footer-logo-container {
-    position: absolute;
-    left: 50%;
-    bottom: 10px; /* Logo ko thoda upar nikaalne ke liye */
-    transform: translateX(-50%);
-}
-
-.footer-circle-logo {
-    width: 70px;
-    height: 70px;
-    background: #fff;
-    border-radius: 50%;
-    padding: 5px;
-    border: 3px solid #000;
+.app-logo {
+    width: 125px;
+    height: 125px;
+    flex-shrink: 0;
     object-fit: cover;
-    transition: 0.3s ease;
+    border-radius: 25px;
+    border: 2px solid var(--gold);
+    padding: 5px;
+    box-shadow: 0 0 35px rgba(212,175,55,0.20);
 }
 
-.footer-circle-logo:hover {
-    transform: scale(1.1);
+.app-badge {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-/* Icons Style (Instagram & WhatsApp) */
-.footer-icon {
-    font-size: 24px;
-    width: 45px;
-    height: 45px;
+.app-banner h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.app-banner h2 span {
+    color: var(--gold);
+}
+
+.app-banner-description {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 760px;
+    margin-bottom: 25px;
+}
+
+.app-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 13px 25px;
+    margin-bottom: 30px;
+}
+
+.app-feature {
     display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.app-feature i {
+    color: var(--gold);
+    font-size: 14px;
+}
+
+.play-store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #D4AF37, #E8C766);
+    color: #000;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.play-store-btn:hover {
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(212,175,55,0.25);
+}
+
+.app-tagline {
+    margin-top: 20px;
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+
+    .app-section {
+        padding: 50px 15px;
+    }
+
+    .app-banner {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .app-banner-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .app-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .app-features {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .app-feature {
+        justify-content: flex-start;
+    }
+
+    .play-store-btn {
+        justify-content: center;
+    }
+}
+
+
+/* ================= APP POPUP ================= */
+
+.app-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(7px);
+    display: none;
     align-items: center;
     justify-content: center;
+    z-index: 99999999;
+    padding: 20px;
+}
+
+.app-popup-box {
+    width: 100%;
+    max-width: 430px;
+    background: linear-gradient(145deg,#1c1c1c,#080808);
+    border: 1px solid rgba(212,169,78,.5);
+    border-radius: 25px;
+    padding: 32px 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 25px 80px rgba(0,0,0,.7);
+    animation: appPopup .35s ease;
+}
+
+@keyframes appPopup {
+    from {
+        transform: scale(.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.app-popup-close {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    width: 35px;
+    height: 35px;
+    border: none;
     border-radius: 50%;
-    color: #fff !important;
-    transition: 0.3s;
+    background: #292929;
+    color: #fff;
+    font-size: 18px;
+}
+
+.app-popup-logo {
+    width: 85px;
+    height: 85px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+    padding: 3px;
+    margin-bottom: 18px;
+}
+
+.app-popup-box h2 {
+    font-weight: 900;
+    color: #fff;
+}
+
+.app-popup-box h2 span {
+    color: var(--gold);
+}
+
+.app-popup-box p {
+    color: #bbb;
+    line-height: 1.7;
+}
+
+
+.app-popup-btn {
+    display: block;
+    background: var(--gold);
+    color: #000;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: 900;
     text-decoration: none;
 }
 
-/* Instagram Gradient Background */
-.insta-bg {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+.app-popup-btn:hover {
+    background: var(--gold-light);
+    color: #000;
 }
 
-/* WhatsApp Green Background */
-.wa-bg {
-    background: #25D366;
+/* =========================
+   POPUP FEATURE LIST
+========================= */
+
+.popup-app-features {
+    text-align: left;
+    margin: 20px 0 25px;
 }
 
-.footer-icon:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.popup-app-features div {
+    color: #eee;
+    font-size: 14px;
+    margin: 11px 0;
 }
 
-/* Laptop par adjustments */
-@media (min-width: 992px) {
-    .floating-footer {
-        bottom: 30px;
-        width: 350px;
+.popup-app-features i {
+    color: var(--gold);
+    margin-right: 9px;
+}
+
+.app-popup-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(135deg, #D4A94E, #F0C96A);
+    color: #000;
+    padding: 14px 20px;
+    border-radius: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.app-popup-btn:hover {
+    background: var(--gold-light);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+@media(max-width:600px) {
+    .app-banner-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-icon {
+        order: -1;
     }
 }
 
     </style>
 </head>
 <script>
-function shareWebsite() {
-  if (navigator.share) {
-    navigator.share({
-      title: 'Akbar Ali Interior',
-      text: 'Check out this amazing interior design website!',
-      url: 'https://altafkhan01017-star.github.io/akbar-ali/'
-    });
-  } else {
-    alert("Sharing not supported on this browser");
-  }
-}
+    function shareWebsite() {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Akbar Ali Interior',
+                text: 'Check out this amazing interior design website!',
+                url: 'https://altafkhan01017-star.github.io/akbar-ali/'
+            });
+        } else {
+            alert("Sharing not supported on this browser");
+        }
+    }
 </script>
+
 <body>
 
-    <nav id="master-nav" class="navbar navbar-expand-lg fixed-top shadow-sm" 
-     style="background:linear-gradient(90deg,#000000,#434343);">
-  <div class="container">
-    
-    <!-- Brand -->
-    <a class="navbar-brand d-flex align-items-center text-warning fw-bold fs-4" href="index.html">
-      <img src="akbar ali logo.jpg" alt="Logo" width="40" class="me-2 rounded-circle shadow">
-      Akbar Ali Interior
-    </a>
+    <nav id="master-nav" class="navbar navbar-expand-lg fixed-top shadow-sm"
+        style="background:linear-gradient(90deg,#000000,#434343);">
+        <div class="container">
 
-    <!-- Toggler -->
-    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center text-warning fw-bold fs-4" href="index.html">
+                <img src="akbar ali logo.jpg" alt="Logo" width="40" class="me-2 rounded-circle shadow">
+                Akbar Ali Interior
+            </a>
 
-    <!-- Offcanvas -->
-    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
-      <div class="offcanvas-header border-bottom d-lg-none">
-        <h5 class="offcanvas-title fw-bold">Menu</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-      </div>
-      
-      <div class="offcanvas-body">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
+            <!-- Toggler -->
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <!-- Links -->
-          <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="about.html">About Us</a></li>
-         
+            <!-- Offcanvas -->
+            <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom d-lg-none">
+                    <h5 class="offcanvas-title fw-bold">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
 
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle text-white fw-semibold mx-2" href="#" id="servicesDrop" data-bs-toggle="dropdown">
-    Services
-  </a>
-  <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3" 
-      style="background:linear-gradient(135deg,#1f1f1f,#3a3a3a);">
-    <li><a class="dropdown-item text-warning fw-semibold" href="pop.html">POP Wall Punning</a></li>
-    <li><a class="dropdown-item text-warning fw-semibold" href="gypsum.html">Gypsum Ceiling</a></li>
-    <li><a class="dropdown-item text-warning fw-semibold" href="pvc.html">PVC Ceiling</a></li>
-    <li><a class="dropdown-item text-warning fw-semibold" href="arm.html">Modular Ceiling</a></li>
-  </ul>
-</li>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
 
-          <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="https://drive.google.com/file/d/1xqOlU0jy1bv1Pc18wK4OEiCUOfOj8K_C/view?usp=drivesdk">Portfolio</a></li><br> 
+                        <!-- Links -->
+                        <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold" href="about.html">About
+                                Us</a></li>
 
-          
-          <!-- Attractive Share Button -->
-          <li class="nav-item">
-            <button onclick="shareWebsite()" 
-              style="padding:10px 22px; background:linear-gradient(45deg,#ff9800,#ff5722); color:white; 
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white fw-semibold mx-2" href="#" id="servicesDrop"
+                                data-bs-toggle="dropdown">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 rounded-3"
+                                style="background:linear-gradient(135deg,#1f1f1f,#3a3a3a);">
+                                <li><a class="dropdown-item text-warning fw-semibold" href="wall.html">Wall Solutions
+                                        Punning</a></li>
+                                <li><a class="dropdown-item text-warning fw-semibold" href="Residential.html"> Residential
+                                        Interior</a></li>
+                                <li><a class="dropdown-item text-warning fw-semibold" href="pvc.html">PVC Ceiling & Wall Panel</a>
+                                </li>
+                                <li><a class="dropdown-item text-warning fw-semibold" href="commercial.html"> Commercial Interior</a></li>
+                                    
+                                       
+                                        <li><a class="dropdown-item text-warning fw-semibold" href="furniture.html"> Coustom furniture </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link text-white mx-2 fw-semibold"
+                                href="https://drive.google.com/file/d/1xqOlU0jy1bv1Pc18wK4OEiCUOfOj8K_C/view?usp=drivesdk">Portfolio</a>
+                        </li><br>
+
+
+                        <!-- Attractive Share Button -->
+                        <li class="nav-item">
+                            <button onclick="shareWebsite()" style="padding:10px 22px; background:linear-gradient(45deg,#ff9800,#ff5722); color:white; 
                      border:none; border-radius:25px; font-weight:bold; 
                      box-shadow:0 4px 12px rgba(0,0,0,0.4); transition:0.3s;">
-              <i class="fas fa-share-alt"></i> Share
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
-
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="home page.jpg" class="d-block w-100 img-fluid" alt="Interior Design">
-                <div class="carousel-caption d-none d-md-block text-white">
-                    <h1 class="fw-bold">AKBAR ALI INTERIOR</h1>
-                    <p>Creating beautiful and functional spaces with expert design.</p>
-                    <a href="#quote-form" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow">Free site
-                        visit</a>
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </nav>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+
+   <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <img src="full logo .jpeg"
+                alt="Akbar Ali Interior"
+                class="hero-logo">
+
+
+            <h1>
+
+                AKBAR ALI
+                <span class="gold">INTERIOR</span>
+
+            </h1>
+
+
+            <div class="hero-tagline">
+
+                WE DESIGN • WE BUILD • YOU LIVE
+
+            </div>
+
+
+            <p>
+
+                Premium interior design and execution solutions
+                for homes, offices, commercial spaces and complete
+                interior projects.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#quote-form"
+                    class="btn btn-gold">
+
+                    <i class="fas fa-calendar-check me-2"></i>
+
+                    FREE SITE VISIT
+
+                </a>
+
+
+                <a href="#services"
+                    class="btn btn-outline-gold">
+
+                    EXPLORE SERVICES
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
     <div class="container my-5">
         <div class="row d-flex align-items-center">
 
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h2 class="display-5 fw-bold mb-3">About Akbar Ali Interior</h2>
-                <p class="lead text-muted">Akbar Ali Interior is a premier interior design company specializing in
-                    innovative ceiling solutions. With years of expertise, we transform ordinary spaces into elegant
-                    designs using modern techniques and high-quality materials.</p>
-                <p>Our team of skilled professionals brings creativity, precision, and passion to every project. We work
-                    with materials like PVC, Gypsum, and Armstrong ceilings to ensure each design reflects your unique
-                    personality and adds timeless beauty.</p>
+            <div class="col-lg-6 about-content">
 
-                <a href="about.html" class="btn btn-outline-dark display-4 fw-bold">Learn More About Us</a>
-            </div>
+                    <span class="gold fw-bold">
+
+                        ABOUT OUR COMPANY
+
+                    </span>
+
+
+                    <h2 class="mt-2">
+
+                        Transforming Spaces
+                        <span class="gold">Beautifully.</span>
+
+                    </h2>
+
+
+                    <div class="gold-line"
+                        style="margin-left:0;">
+
+                    </div>
+
+
+                    <p>
+
+                        Akbar Ali Interior is a professional interior
+                        design and execution company providing modern,
+                        elegant and practical solutions for residential
+                        and commercial spaces.
+
+                    </p>
+
+
+                    <p>
+
+                        From ceilings and wall finishes to furniture,
+                        painting and complete interior work, our skilled
+                        team focuses on quality, precision and timely
+                        execution.
+
+                    </p>
+
+
+                    <div class="about-feature">
+
+                        <i class="fas fa-circle-check"></i>
+
+                        Premium Quality Materials
+
+                    </div>
+
+
+                    <div class="about-feature">
+
+                        <i class="fas fa-circle-check"></i>
+
+                        Professional Execution
+
+                    </div>
+
+
+                    <div class="about-feature">
+
+                        <i class="fas fa-circle-check"></i>
+
+                        Free Site Visit & Consultation
+
+                    </div>
+
+
+                    <div class="about-feature">
+
+                        <i class="fas fa-circle-check"></i>
+
+                        Residential & Commercial Projects
+
+                    </div>
+
+
+                    <a href="about.html"
+                        class="btn btn-outline-gold mt-4">
+
+                        MORE ABOUT US
+
+                    </a>
+
+                </div><br>
 
             <div class="col-md-6">
                 <img src="2.jpg" class="img-fluid rounded shadow-lg" alt="Our Team">
@@ -548,240 +1594,1195 @@ function shareWebsite() {
         </div>
     </div>
 
-    <div class="container my-5">
-        <h2 class="text-center fw-bold mb-5">Our Services</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+   
 
-            <div class="col">
-    <div class="card h-100 shadow-sm border-0 text-center pop-card-bg">
-        <div class="card-body d-flex flex-column card-overlay">
-            <h4 class="card-title fw-bold">POP Wall Punning</h4>
-            <p class="card-text text-muted mb-4">
-                The Plaster of Paris (POP) application process to smooth, 
-                level, and enhance the finish of interior and exterior walls and ceilings.
-            </p>
-            <a href="pop.html" class="btn btn-dark mt-auto detail-btn">View Details</a>
-        </div>
-    </div>
-</div>
+        <section id="services" class="section" style="background:#111;">
 
-           <div class="col">
-    <div class="card h-100 shadow-sm border-0 text-center gypsum-card-bg">
-        <div class="card-body d-flex flex-column card-overlay">
-            <h4 class="card-title fw-bold">Gypsum Ceiling</h4>
-            <p class="card-text text-muted mb-4">
-                Creating smooth and seamless ceiling surfaces with exceptional quality.
-            </p>
-            <a href="gypsum.html" class="btn btn-dark mt-auto detail-btn">View Details</a>
-        </div>
-    </div>
-</div>
+            <div class="container">
 
-           <div class="col">
-    <div class="card h-100 shadow-sm border-0 text-center pvc-card-bg">
-        <div class="card-body d-flex flex-column card-overlay-sharp">
-            <h4 class="card-title fw-bold">PVC Ceiling</h4>
-            <p class="card-text mb-4">
-                Offering durable, waterproof, and modern PVC ceiling solutions.
-            </p>
-            <a href="pvc.html" class="btn btn-dark mt-auto">View Details</a>
-        </div>
-    </div>
-</div>
+                <div class="section-title">
 
-           <div class="col">
-    <div class="card h-100 shadow-sm border-0 text-center modular-card-bg">
-        <div class="card-body d-flex flex-column card-overlay-sharp">
-            <h4 class="card-title fw-bold">Modular Ceiling</h4>
-            <p class="card-text mb-4">
-                Providing practical and professional grid ceilings for commercial spaces.
-            </p>
-            <a href="arm.html" class="btn btn-dark mt-auto">View Details</a>
-        </div>
-    </div>
-</div>
+                    <span class="gold fw-bold">
+
+                        WHAT WE DO
+
+                    </span>
 
 
+                    <h2>
 
-  <div class="col">
-    <div class="card h-100 shadow-sm border-0 text-center work furniture-card-bg">
-        <div class="card-body d-flex flex-column card-overlay-sharp">
-            <h4 class="card-title fw-bold">Furniture</h4>
-            <p class="card-text mb-4">
-                Providing practical and professional grid ceilings for commercial spaces.
-            </p>
-            <a href="furniture.html" class="btn btn-dark mt-auto">View Details</a>
-        </div>
-    </div>
-</div>
+                        Our <span class="gold">Services</span>
 
-        </div>
-    </div>
+                    </h2>
 
-    <div class="bg-white text-dark py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="display-4 fw-bold">Get in Touch with Us</h2>
-                    <p class="lead">We're just a message away. Reach out to us for any queries or to get a free
-                        consultation for your project.</p>
-                    <a href="#quote-form" class="btn btn-warning btn-lg fw-bold text-dark mt-3">Get a Free Quote!</a>
+
+                    <div class="gold-line"></div>
+
+
+                    <p>
+
+                        Complete interior solutions designed around
+                        your style, requirements and budget — from
+                        individual work to complete interior projects.
+
+                    </p>
+
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="card p-4 h-100 border-0 shadow-lg">
-                        <div class="card-body">
-                            <h4 class="fw-bold mb-4">Contact Details</h4>
-                            <ul class="list-unstyled">
-                                <li class="d-flex align-items-center mb-4">
-                                    <i class="fas fa-map-marker-alt fa-2x text-warning me-3"></i>
-                                    <div>
-                                        <h5 class="fw-bold">Office Address</h5>
-                                        <p class="mb-0">H.No.615. flat No.304 , Shahbaj Village , Sector-19 ,CBD-Belapur , Navi Mumbai-400614</p>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center mb-4">
-                                    <a href="https://wa.me/919930433186" target="_blank"
-                                        class="text-decoration-none text-dark d-flex align-items-center">
-                                        <i class="fab fa-whatsapp fa-2x text-warning me-3"></i>
-                                        <div>
-                                            <h5 class="fw-bold">WhatsApp Chat</h5>
-                                            <p class="mb-0">+91 9930433186</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="d-flex align-items-center mb-4">
-                                    <a href="tel:+918356855616"
-                                        class="text-decoration-none text-dark d-flex align-items-center">
-                                        <i class="fas fa-phone-alt fa-2x text-warning me-3"></i>
-                                        <div>
-                                            <h5 class="fw-bold">Phone Number</h5>
-                                            <p class="mb-0">+91 8356855616</p><br>
-                                            
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="d-flex align-items-center mb-4">
-                                    <a href="mailto:info@akbaraliinterior.com"
-                                        class="text-decoration-none text-dark d-flex align-items-center">
-                                        <i class="fas fa-envelope fa-2x text-warning me-3"></i>
-                                        <div>
-                                            <h5 class="fw-bold">Email Address</h5>
-                                            <p class="mb-0">akbaraliinterior9197@gmail.com</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <a href="https://www.instagram.com/akbaraliinterior?igsh=ZWtuc293cjRqdzFu"
-                                        target="_blank"
-                                        class="text-decoration-none text-dark d-flex align-items-center">
-                                        <i class="fab fa-instagram fa-2x text-warning me-3"></i>
-                                        <div>
-                                            <h5 class="fw-bold">Instagram</h5>
-                                            <p class="mb-0">Akbar.Ali.Interior</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+
+                <div class="row g-4">
+
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="service-card pop-card">
+
+                            <div class="service-overlay">
+
+                                <div class="service-icon">
+
+                                    <i class="fas fa-layer-group"></i>
+
+                                </div>
+
+
+                                <h4>
+
+                                    Wall Solutions
+
+                                </h4>
+
+
+                                <p>
+
+                                    Smooth, level and premium wall
+                                    finishing using professional POP
+                                    application techniques.
+
+                                </p>
+
+
+                                <a href="wall.html" class="service-btn">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right ms-2"></i>
+
+                                </a>
+
+                            </div>
+
                         </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="service-card gypsum-card">
+
+                            <div class="service-overlay">
+
+                                <div class="service-icon">
+
+                                    <i class="fas fa-border-all"></i>
+
+                                </div>
+
+
+                                <h4>
+
+                                    Residential Interior
+
+                                </h4>
+
+
+                                <p>
+
+                                    Elegant and functional interior solutions designed for homes, apartments and residential spaces.
+
+                                </p>
+
+
+                                <a href="Residential.html" class="service-btn">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right ms-2"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="service-card pvc-card">
+
+                            <div class="service-overlay">
+
+                                <div class="service-icon">
+
+                                    <i class="fas fa-table-cells-large"></i>
+
+                                </div>
+
+
+                                <h4>
+
+                                    PVC Ceiling Solutions
+
+                                </h4>
+
+
+                                <p>
+
+                                    Durable, waterproof and stylish PVC
+                                    ceiling solutions for modern spaces.
+
+                                </p>
+
+
+                                <a href="pvc.html" class="service-btn">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right ms-2"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MODULAR -->
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="service-card modular-card">
+
+                            <div class="service-overlay">
+
+                                <div class="service-icon">
+
+                                    <i class="fas fa-grip"></i>
+
+                                </div>
+
+
+                                <h4>
+
+                                    Commercial Interior
+
+                                </h4>
+
+
+                                <p>
+
+                                    Practical and professional interior
+                                    solutions for offices and commercial
+                                    spaces.
+
+                                </p>
+
+
+                                <a href="commercial.html" class="service-btn">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right ms-2"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FURNITURE -->
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="service-card furniture-card">
+
+                            <div class="service-overlay">
+
+                                <div class="service-icon">
+
+                                    <i class="fas fa-couch"></i>
+
+                                </div>
+
+
+                                <h4>
+
+                                    Custom Furniture
+
+                                </h4>
+
+
+                                <p>
+
+                                    Custom furniture solutions designed
+                                    to match your space, lifestyle and
+                                    interior theme.
+
+                                </p>
+
+
+                                <a href="furniture.html" class="service-btn">
+
+                                    VIEW DETAILS
+
+                                    <i class="fas fa-arrow-right ms-2"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- FULL INTERIOR -->
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <div class="service-card full-interior-card">
+
+                            <div class="service-overlay">
+
+                                <div class="service-icon">
+
+                                    <i class="fas fa-house"></i>
+
+                                </div>
+
+
+                                <h4>
+
+                                    Complete Interior Projects
+
+                                </h4>
+
+
+                                <p>
+
+                                    Complete interior design and
+                                    execution from concept to final
+                                    handover.
+
+                                </p>
+
+
+                                <a href="#quote-form" class="service-btn">
+
+                                    BOOK CONSULTATION
+
+                                    <i class="fas fa-arrow-right ms-2"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div id="quote-form" class="bg-dark text-white py-5">
+            </div>
+
+        </section>
+
+<section class="section">
+
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center mb-5">
-                    <h2 class="display-4 fw-bold mb-3">Ready to Transform Your Space?</h2>
-                    <p class="lead">Tell us about your project! Fill out the form below for a free consultation and a
-                        personalized quote.</p>
-                </div>
+
+            <div class="section-title">
+
+                <span class="gold fw-bold">
+
+                    WHY CHOOSE US
+
+                </span>
+
+
+                <h2>
+
+                    Built on <span class="gold">Trust</span>
+
+                </h2>
+
+
+                <div class="gold-line"></div>
+
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card p-4 shadow-lg border-0 bg-light text-dark">
-                        <div class="card-body">
-
-                            <form action="https://formspree.io/f/xrbyabwd" method="POST">
 
 
-                                <input type="hidden" name="_next"
-                                    value="https://altafkhan01017-star.github.io/website/">
+            <div class="row g-4">
 
 
+                <div class="col-md-6 col-lg-3">
 
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="nameInput" class="form-label fw-bold">Your Name</label><br>
-                                        <input type="text" class="form-control form-control-lg" id="nameInput"
-                                            name="Name" required><br> 
-                                    </div><br>
-                                    <div class="col-md-6">
-                                        <label for="phoneInput" class="form-label fw-bold">Phone Number</label>
-                                        <input type="tel" class="form-control form-control-lg" id="phoneInput"
-                                            name="Phone Number" required><br>
-                                    </div>
-                                </div>
+                    <div class="why-card">
 
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="emailInput" class="form-label fw-bold">Email Address</label>
-                                        <input type="email" class="form-control form-control-lg" id="emailInput"
-                                            name="Email" required><br>
-                                    </div><br>
-                                    <div class="col-md-6">
-                                        <label for="addressInput" class="form-label fw-bold">Your Location /
-                                            Address</label>
-                                        <input type="text" class="form-control form-control-lg" id="addressInput"
-                                            name="Location"><br>
-                                    </div><br>
-                                </div>
+                        <div class="why-icon">
 
-                                <div class="mb-4">
-                                    <label for="projectDetails" class="form-label fw-bold">Tell Us About Your Project
-                                        (Work Required)</label>
-                                    <textarea class="form-control form-control-lg" id="projectDetails"
-                                        name="Project Details" rows="5"
-                                    ></textarea>
-                                </div><br>
+                            <i class="fas fa-medal"></i>
 
-                                <div class="d-grid">
+                        </div>
 
-                                    <button type="submit"   class="btn btn-warning btn-lg fw-bold text-dark py-3">Get My
-                                        Free Quote!</button>
-                                </div>
-                            </form>
-                        </div><br><br>
+
+                        <h4>
+
+                            Quality Work
+
+                        </h4>
+
+
+                        <p>
+
+                            We focus on professional finishing,
+                            quality materials and attention to
+                            every detail.
+
+                        </p>
+
                     </div>
+
                 </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="why-card">
+
+                        <div class="why-icon">
+
+                            <i class="fas fa-clock"></i>
+
+                        </div>
+
+
+                        <h4>
+
+                            Timely Service
+
+                        </h4>
+
+
+                        <p>
+
+                            We understand the importance of time
+                            and aim to complete projects as planned.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="why-card">
+
+                        <div class="why-icon">
+
+                            <i class="fas fa-user-check"></i>
+
+                        </div>
+
+
+                        <h4>
+
+                            Expert Team
+
+                        </h4>
+
+
+                        <p>
+
+                            Experienced professionals handle your
+                            project with care and precision.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="why-card">
+
+                        <div class="why-icon">
+
+                            <i class="fas fa-location-dot"></i>
+
+                        </div>
+
+
+                        <h4>
+
+                            Free Site Visit
+
+                        </h4>
+
+
+                        <p>
+
+                            Get professional consultation and
+                            site assessment for your project.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
             </div>
+
         </div>
+
+    </section>
+
+
+     <section class="section contact-section">
+
+        <div class="container">
+
+            <div class="row g-5 align-items-center">
+
+
+                <div class="col-lg-5">
+
+                    <span class="gold fw-bold">
+
+                        CONTACT US
+
+                    </span>
+
+
+                    <h2 class="display-5 fw-bold mt-2">
+
+                        Let's Build Your
+                        <span class="gold">Dream Space.</span>
+
+                    </h2>
+
+
+                    <div class="gold-line"
+                        style="margin-left:0;">
+
+                    </div>
+
+
+                    <p style="color:#aaa;line-height:1.8;">
+
+                        Have a project in mind? Contact us today
+                        for a consultation, quotation or free site
+                        visit.
+
+                    </p>
+
+
+                    <a href="#quote-form"
+                        class="btn btn-gold mt-3">
+
+                        GET FREE QUOTE
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="contact-card">
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fas fa-location-dot"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h5>
+
+                                    Office Address
+
+                                </h5>
+
+
+                                <p>
+
+                                    H.No.615, Flat No.304,
+                                    Shahbaj Village, Sector-19,
+                                    CBD-Belapur,
+                                    Navi Mumbai - 400614
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fab fa-whatsapp"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h5>
+
+                                    WhatsApp
+
+                                </h5>
+
+
+                                <a href="https://wa.me/919930433186"
+                                    target="_blank"
+                                    rel="noopener">
+
+                                    <p>
+
+                                        +91 9930433186
+
+                                    </p>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fas fa-phone"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h5>
+
+                                    Phone Number
+
+                                </h5>
+
+
+                                <a href="tel:+918356855616">
+
+                                    <p>
+
+                                        +91 8356855616
+
+                                    </p>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fas fa-envelope"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h5>
+
+                                    Email
+
+                                </h5>
+
+
+                                <a href="mailto:akbaraliinterior9197@gmail.com">
+
+                                    <p>
+
+                                        akbaraliinterior9197@gmail.com
+
+                                    </p>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fab fa-instagram"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h5>
+
+                                    Instagram
+
+                                </h5>
+
+
+                                <a href="https://www.instagram.com/akbaraliinterior"
+                                    target="_blank"
+                                    rel="noopener">
+
+                                    <p>
+
+                                        @akbaraliinterior
+
+                                    </p>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+<!-- =========================
+     AKBAR ALI INTERIOR APP
+========================= -->
+
+<section class="app-section">
+
+    <div class="container">
+
+        <div class="app-banner">
+
+            <div class="app-banner-content">
+
+                <img
+                    src="full logo .jpeg"
+                    alt="Akbar Ali Interior App"
+                    class="app-logo">
+
+                <div>
+
+                    <div class="app-badge">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        &nbsp; AKBAR ALI INTERIOR APP
+                    </div>
+
+                    <h2>
+                        Your Interior Journey,
+                        <span>All In One App.</span>
+                    </h2>
+
+                    <p class="app-banner-description">
+
+                        From booking your interior project to
+                        tracking project progress, payments and
+                        important documents — manage your interior
+                        journey from one simple app.
+
+                        Book a free site visit, request services,
+                        stay updated with your project and stay
+                        connected with the Akbar Ali Interior team
+                        from anywhere.
+
+                    </p>
+
+
+                    <div class="app-features">
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Interior Project Booking
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Free Site Visit Booking
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Online & Instant Booking
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Project Progress & Updates
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Payment & EMI Status
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Quotation & Agreement
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Bills & Documents
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Project Photos & Designs
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Client & Team Communication
+                        </div>
+
+                        <div class="app-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Notifications & Updates
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.akbarali.interior&pcampaignid=web_share"
+                        target="_blank"
+                        rel="noopener"
+                        class="play-store-btn">
+
+                        <i class="fa-brands fa-google-play"></i>
+
+                        GET IT ON GOOGLE PLAY
+
+                    </a>
+
+
+                    <div class="app-tagline">
+
+                        WE DESIGN • WE BUILD • YOU LIVE
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="floating-footer">
-    <div class="container d-flex justify-content-between align-items-center position-relative">
+</section>
+
+    <!-- =========================================================
+         QUOTE FORM
+    ========================================================== -->
+
+    <section id="quote-form"
+        class="section quote-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="gold fw-bold">
+
+                    START YOUR PROJECT
+
+                </span>
+
+
+                <h2>
+
+                    Get a Free <span class="gold">Quote</span>
+
+                </h2>
+
+
+                <div class="gold-line"></div>
+
+
+                <p>
+
+                    Tell us about your project and our team will
+                    contact you for consultation and site visit.
+
+                </p>
+
+            </div>
+
+
+            <div class="quote-box">
+
+
+                <form action="https://formspree.io/f/xrbyabwd"
+                    method="POST">
+
+
+                    <input type="hidden"
+                        name="_next"
+                        value="https://altafkhan01017-star.github.io/website/">
+
+
+
+                    <div class="row g-4">
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+
+                                Your Name
+
+                            </label>
+
+
+                            <input type="text"
+                                class="form-control"
+                                name="Name"
+                                placeholder="Enter your name"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+
+                                Phone Number
+
+                            </label>
+
+
+                            <input type="tel"
+                                class="form-control"
+                                name="Phone Number"
+                                placeholder="+91"
+                                autocomplete="tel"
+                                inputmode="tel"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+
+                                Email Address
+
+                            </label>
+
+
+                            <input type="email"
+                                class="form-control"
+                                name="Email"
+                                placeholder="Enter your email"
+                                autocomplete="email">
+
+                        </div>
+
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+
+                                Location / Address
+
+                            </label>
+
+
+                            <input type="text"
+                                class="form-control"
+                                name="Location"
+                                placeholder="Your location"
+                                autocomplete="street-address">
+
+                        </div>
+
+
+
+                        <div class="col-12">
+
+                            <label class="form-label">
+
+                                Work Required
+
+                            </label>
+
+
+                            <textarea
+                                class="form-control"
+                                name="Project Details"
+                                placeholder="Tell us about your project..."></textarea>
+
+                        </div>
+
+
+
+                        <div class="col-12">
+
+                            <button type="submit"
+                                class="btn btn-gold w-100 py-3">
+
+                                <i class="fas fa-paper-plane me-2"></i>
+
+                                GET MY FREE QUOTE
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<footer class="main-footer">
+
+        <div class="container">
+
+            <h4>
+
+                AKBAR ALI
+                <span class="footer-gold">INTERIOR</span>
+
+            </h4>
+
+
+            <p class="mt-2">
+
+                WE DESIGN • WE BUILD • YOU LIVE
+
+            </p>
+
+
+            <p class="small mt-4">
+
+                © 2026 Akbar Ali Interior. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
         
-        <a href="https://www.instagram.com/akbaraliinterior?igsh=ZWtuc293cjRqdzFu" target="_blank" class="footer-icon insta-bg">
-            <i class="fab fa-instagram"></i>
-        </a>
+       
+<!-- ================= APP POPUP ================= -->
 
-        <div class="footer-logo-container">
-            <a href="index.html">
-                <img src="full logo .jpeg" alt="Logo" class="footer-circle-logo shadow">
-            </a>
+<!-- ================= APP POPUP ================= -->
+
+<div class="app-popup" id="appPopup">
+
+    <div class="app-popup-box">
+
+        <button
+            class="app-popup-close"
+            onclick="closeAppPopup()">
+            ×
+        </button>
+
+
+        <img
+            src="full logo .jpeg"
+            alt="Akbar Ali Interior App"
+            class="app-popup-logo">
+
+
+        <div class="app-badge">
+            AKBAR ALI INTERIOR APP
         </div>
 
-        <a href="https://wa.me/919930433186" target="_blank" class="footer-icon wa-bg">
-            <i class="fab fa-whatsapp"></i>
+
+        <h2>
+            Your Interior Journey
+            <span>Starts Here.</span>
+        </h2>
+
+
+        <p>
+            Book your interior project, request a free site
+            visit, track project updates, check payments and
+            manage important documents — all from one app.
+        </p>
+
+
+        <div class="popup-app-features">
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Interior Project Booking
+            </div>
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Free Site Visit
+            </div>
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Project Progress & Updates
+            </div>
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Payment & EMI Status
+            </div>
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Quotations, Agreements & Bills
+            </div>
+
+            <div>
+                <i class="fas fa-check-circle"></i>
+                Project Photos & Documents
+            </div>
+
+        </div>
+
+
+        <a
+            href="https://play.google.com/store/apps/details?id=com.akbarali.interior&pcampaignid=web_share"
+            target="_blank"
+            rel="noopener"
+            class="app-popup-btn">
+
+            <i class="fa-brands fa-google-play me-2"></i>
+
+            OPEN OUR APP
+
         </a>
 
+
     </div>
+
+</div>
+       
+       <div class="floating-bar">
+
+
+    <a
+        href="https://www.instagram.com/akbaraliinterior"
+        target="_blank"
+        class="social-btn instagram">
+
+        <i class="fa-brands fa-instagram"></i>
+
+    </a>
+
+
+    <a
+        href="index.html"
+        class="floating-logo">
+
+        <img
+            src="full logo .jpeg"
+            alt="Akbar Ali Interior">
+
+    </a>
+
+
+    <a
+        href="https://wa.me/919930433186"
+        target="_blank"
+        class="social-btn whatsapp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+function closeAppPopup() {
+
+    document.getElementById("appPopup").style.display = "none";
+
+}
+
+
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        const popup = document.getElementById("appPopup");
+
+        if (popup) {
+            popup.style.display = "flex";
+        }
+
+    }, 2500);
+
+});
+
+</script>
 </body>
 
 </html>
